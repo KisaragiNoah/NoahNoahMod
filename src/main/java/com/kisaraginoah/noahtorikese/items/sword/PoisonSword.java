@@ -10,6 +10,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 
 public class PoisonSword extends SwordItem {
 
@@ -31,7 +32,7 @@ public class PoisonSword extends SwordItem {
         }
 
         @Override
-        public TagKey<Block> getIncorrectBlocksForDrops() {
+        public @NotNull TagKey<Block> getIncorrectBlocksForDrops() {
             return BlockTags.INCORRECT_FOR_WOODEN_TOOL;
         }
 
@@ -41,7 +42,7 @@ public class PoisonSword extends SwordItem {
         }
 
         @Override
-        public Ingredient getRepairIngredient() {
+        public @NotNull Ingredient getRepairIngredient() {
             return Ingredient.of(new ItemStack(Items.POISONOUS_POTATO));
         }
     };
@@ -51,10 +52,10 @@ public class PoisonSword extends SwordItem {
     }
 
     @Override
-    public boolean hurtEnemy(ItemStack itemStack, LivingEntity hitentity, LivingEntity attackentity) {
-        boolean retval = super.hurtEnemy(itemStack, hitentity, attackentity);
+    public boolean hurtEnemy(@NotNull ItemStack itemStack, @NotNull LivingEntity hitentity, @NotNull LivingEntity attackentity) {
+        boolean retrieval = super.hurtEnemy(itemStack, hitentity, attackentity);
         EntityHit(hitentity, attackentity);
-        return  retval;
+        return  retrieval;
     }
 
     public static void EntityHit(Entity hitentity, Entity attackentity) {
@@ -66,6 +67,8 @@ public class PoisonSword extends SwordItem {
                 if(player.getAttackStrengthScale(1.0F) >= 1.0F) {
                     entity.addEffect(new MobEffectInstance(MobEffects.POISON, 80, 1));
                 }
+            } else if (hitentity instanceof Player player){
+                player.addEffect(new MobEffectInstance(MobEffects.POISON, 40, 1));
             } else {
                 entity.addEffect(new MobEffectInstance(MobEffects.POISON, 40, 1));
             }
