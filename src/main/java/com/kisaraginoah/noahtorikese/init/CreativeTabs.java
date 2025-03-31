@@ -10,9 +10,14 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class CreativeTabs {
-    public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, NoahNoahMod.MOD_ID);
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NOAH_EXPANSION_CREATIVE_TABS = REGISTRY.register("noah_expansion_creative_tabs",
-            () -> CreativeModeTab.builder().title(Component.translatable("item_group.noahnoahmod.creativetabs")).icon(() -> new ItemStack(Blocks.CHERRY_SAPLING)).displayItems((parameters, tabData) -> {
-                tabData.accept(ModItems.POISON_SWORD.get());
-            }).withSearchBar().build());
+    public static final DeferredRegister<CreativeModeTab> REGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, NoahNoahMod.MOD_ID);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NOAHNOAHMODCREATIVETABS;
+
+    static {
+        NOAHNOAHMODCREATIVETABS = REGISTER.register("noahnoahmodcreativetabs",
+                () -> CreativeModeTab.builder().title(Component.translatable("item_group.noahnoahmod.creativetabs")).icon(() -> new ItemStack(Blocks.CHERRY_SAPLING)).displayItems((parameters, tabData) -> {
+                    tabData.accept(ModItems.POISON_SWORD.get());
+                    tabData.accept(ModItems.VAMPIRE_SWORD.get());
+                }).withSearchBar().build());
+    }
 }
