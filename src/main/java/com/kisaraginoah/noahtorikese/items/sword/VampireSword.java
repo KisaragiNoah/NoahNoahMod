@@ -5,7 +5,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
-import org.jetbrains.annotations.NotNull;
 
 public class VampireSword extends SwordItem {
 
@@ -27,7 +26,7 @@ public class VampireSword extends SwordItem {
         }
 
         @Override
-        public @NotNull TagKey<Block> getIncorrectBlocksForDrops() {
+        public TagKey<Block> getIncorrectBlocksForDrops() {
             return BlockTags.INCORRECT_FOR_WOODEN_TOOL;
         }
 
@@ -37,7 +36,7 @@ public class VampireSword extends SwordItem {
         }
 
         @Override
-        public @NotNull Ingredient getRepairIngredient() {
+        public Ingredient getRepairIngredient() {
             return Ingredient.of(new ItemStack(Items.POISONOUS_POTATO));
         }
     };

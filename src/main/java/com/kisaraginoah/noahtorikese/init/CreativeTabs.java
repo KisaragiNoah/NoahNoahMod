@@ -18,6 +18,7 @@ public class CreativeTabs {
                 () -> CreativeModeTab.builder().title(Component.translatable("item_group.noahnoahmod.creativetabs")).icon(() -> new ItemStack(Blocks.CHERRY_SAPLING)).displayItems((parameters, tabData) -> {
                     tabData.accept(ModItems.POISON_SWORD.get());
                     tabData.accept(ModItems.VAMPIRE_SWORD.get());
+                    tabData.accept(ModItems.WAND_OF_HEALING.get());
                 }).withSearchBar().build());
     }
 }
