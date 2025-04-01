@@ -2,11 +2,6 @@ package com.kisaraginoah.noahtorikese.items.sword;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
@@ -49,19 +44,5 @@ public class PoisonSword extends SwordItem {
 
     public PoisonSword() {
         super(TOOLTIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOLTIER, 5f, -3.2f)));
-    }
-
-    @Override
-    public boolean hurtEnemy(@NotNull ItemStack itemStack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
-        if (target instanceof LivingEntity entity && !entity.level().isClientSide()) {
-            if (attacker instanceof Player player) {
-                if(player.getAttackStrengthScale(1.0F) >= 1.0F) {
-                    entity.addEffect(new MobEffectInstance(MobEffects.POISON, 80, 1));
-                }
-            } else if (attacker instanceof Mob) {
-                entity.addEffect(new MobEffectInstance(MobEffects.POISON, 40, 1));
-            }
-        }
-        return  super.hurtEnemy(itemStack, target, attacker);
     }
 }
