@@ -4,8 +4,8 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -52,26 +52,16 @@ public class PoisonSword extends SwordItem {
     }
 
     @Override
-    public boolean hurtEnemy(@NotNull ItemStack itemStack, @NotNull LivingEntity hitentity, @NotNull LivingEntity attackentity) {
-        boolean retrieval = super.hurtEnemy(itemStack, hitentity, attackentity);
-        EntityHit(hitentity, attackentity);
-        return  retrieval;
-    }
-
-    public static void EntityHit(Entity hitentity, Entity attackentity) {
-        if (hitentity == null || attackentity == null) {
-            return;
-        }
-        if (hitentity instanceof LivingEntity entity && !entity.level().isClientSide()) {
-            if (attackentity instanceof Player player) {
+    public boolean hurtEnemy(@NotNull ItemStack itemStack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
+        if (target instanceof LivingEntity entity && !entity.level().isClientSide()) {
+            if (attacker instanceof Player player) {
                 if(player.getAttackStrengthScale(1.0F) >= 1.0F) {
                     entity.addEffect(new MobEffectInstance(MobEffects.POISON, 80, 1));
                 }
-            } else if (hitentity instanceof Player player){
-                player.addEffect(new MobEffectInstance(MobEffects.POISON, 40, 1));
-            } else {
+            } else if (attacker instanceof Mob) {
                 entity.addEffect(new MobEffectInstance(MobEffects.POISON, 40, 1));
             }
         }
+        return  super.hurtEnemy(itemStack, target, attacker);
     }
 }
