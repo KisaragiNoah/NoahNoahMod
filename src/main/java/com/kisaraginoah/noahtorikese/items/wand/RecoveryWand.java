@@ -35,6 +35,7 @@ public class RecoveryWand extends Item {
         return InteractionResultHolder.consume(player.getItemInHand(hand));
     }
 
+    //チャージ完了時の処理
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity livingEntity) {
         if (!world.isClientSide && livingEntity instanceof Player player) {
@@ -42,6 +43,14 @@ public class RecoveryWand extends Item {
             player.getCooldowns().addCooldown(this, 1200);
         }
         return stack;
+    }
+
+    //チャージ未完了時に使用をやめたとき短時間クールダウン
+    @Override
+    public void releaseUsing(ItemStack stack, Level level, LivingEntity livingEntity, int timeCharged) {
+        if (!level.isClientSide && livingEntity instanceof Player player) {
+            player.getCooldowns().addCooldown(this, 60);
+        }
     }
 
     @Override
