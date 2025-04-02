@@ -54,10 +54,9 @@ public class SetMaxHealthCommand {
                 return Command.SINGLE_SUCCESS;
             }
             sourceStack.sendFailure(Component.literal("対象の最大体力を設定できませんでした。"));
-            return 0;
         } else {
             sourceStack.sendFailure(Component.literal("対象は生物のみ指定可能です。"));
-            return 0;
         }
+        return 0;
     }
 }
