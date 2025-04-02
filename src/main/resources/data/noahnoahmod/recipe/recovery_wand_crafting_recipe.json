@@ -7,8 +7,12 @@
     " e "
   ],
   "key": {
-    "e": "minecraft:enchanted_golden_apple",
-    "/": "noahnoahmod:restoration_wand"
+    "e": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "/":{
+      "item": "noahnoahmod:restoration_wand"
+    }
   },
   "result": {
     "id": "noahnoahmod:recovery_wand",

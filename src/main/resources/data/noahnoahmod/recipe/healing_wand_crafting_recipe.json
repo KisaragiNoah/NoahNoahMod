@@ -7,8 +7,12 @@
     "/  "
   ],
   "key": {
-    "g": "minecraft:golden_apple",
-    "/": "minecraft:stick"
+    "g": {
+      "item": "minecraft:golden_apple"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
   },
   "result": {
     "id": "noahnoahmod:healing_wand",

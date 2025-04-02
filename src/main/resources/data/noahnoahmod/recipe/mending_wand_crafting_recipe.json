@@ -7,8 +7,12 @@
     "ggg"
   ],
   "key": {
-    "g": "minecraft:golden_apple",
-    "/": "noahnoahmod:healing_wand"
+    "g": {
+      "item": "minecraft:golden_apple"
+    },
+    "/": {
+      "item": "noahnoahmod:healing_wand"
+    }
   },
   "result": {
     "id": "noahnoahmod:mending_wand",
