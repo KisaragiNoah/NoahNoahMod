@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  #",
+    " G ",
+    "/  "
+  ],
+  "key": {
+    "G": "minecraft:golden_apple",
+    "#": "minecraft:enchanted_golden_apple",
+    "/": "noahnoahmod:wand_of_healing"
+  },
+  "result": {
+    "id": "noahnoahmod:wand_of_mending",
+    "count": 1
+  }
+}

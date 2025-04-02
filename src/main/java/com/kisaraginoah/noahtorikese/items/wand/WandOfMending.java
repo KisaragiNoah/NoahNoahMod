@@ -10,9 +10,9 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 
-public class WandOfHealing extends Item {
-    public WandOfHealing() {
-        super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+public class WandOfMending extends Item {
+    public WandOfMending()  {
+        super(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
     }
 
     @Override
@@ -34,7 +34,7 @@ public class WandOfHealing extends Item {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity livingEntity) {
         if (!world.isClientSide && livingEntity instanceof Player player) {
-            player.setHealth(player.getHealth() + (player.getMaxHealth() * 0.2f) + 2);
+            player.setHealth(player.getHealth() + (player.getMaxHealth() * 0.2f) + 4);
             player.getCooldowns().addCooldown(this, 100);
         }
         return stack;

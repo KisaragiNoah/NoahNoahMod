@@ -1,6 +1,7 @@
 package com.kisaraginoah.noahtorikese.init;
 
 import com.kisaraginoah.noahtorikese.NoahNoahMod;
+import com.kisaraginoah.noahtorikese.items.wand.WandOfMending;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,6 +20,7 @@ public class CreativeTabs {
                     tabData.accept(ModItems.POISON_SWORD.get());
                     tabData.accept(ModItems.VAMPIRE_SWORD.get());
                     tabData.accept(ModItems.WAND_OF_HEALING.get());
+                    tabData.accept(ModItems.WAND_OF_MENDING.get());
                 }).withSearchBar().build());
     }
 }
