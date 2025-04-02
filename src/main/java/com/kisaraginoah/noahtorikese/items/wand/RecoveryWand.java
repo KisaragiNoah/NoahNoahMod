@@ -1,23 +1,27 @@
 package com.kisaraginoah.noahtorikese.items.wand;
 
+import net.minecraft.MethodsReturnNonnullByDefault;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 
-public class WandOfHealing extends Item {
-    public WandOfHealing() {
-        super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
+
+@MethodsReturnNonnullByDefault
+@ParametersAreNonnullByDefault
+public class RecoveryWand extends Item {
+    public RecoveryWand()  {
+        super(new Properties().stacksTo(1).rarity(Rarity.RARE));
     }
 
     @Override
     public int getUseDuration(ItemStack stack, LivingEntity livingEntity) {
-        return 100;
+        return 60;
     }
 
     @Override
@@ -34,9 +38,14 @@ public class WandOfHealing extends Item {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity livingEntity) {
         if (!world.isClientSide && livingEntity instanceof Player player) {
-            player.setHealth(player.getHealth() + (player.getMaxHealth() * 0.2f) + 2);
-            player.getCooldowns().addCooldown(this, 100);
+            player.setHealth(player.getMaxHealth());
+            player.getCooldowns().addCooldown(this, 1200);
         }
         return stack;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("item.noahnoahmod.recovery_wand.tooltip1"));
     }
 }

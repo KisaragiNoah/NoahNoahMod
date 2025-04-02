@@ -1,23 +1,27 @@
 package com.kisaraginoah.noahtorikese.items.wand;
 
+import net.minecraft.MethodsReturnNonnullByDefault;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 
-public class WandOfMending extends Item {
-    public WandOfMending()  {
-        super(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
+import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
+
+@MethodsReturnNonnullByDefault
+@ParametersAreNonnullByDefault
+public class RestorationWand extends Item {
+    public RestorationWand()  {
+        super(new Properties().stacksTo(1).rarity(Rarity.EPIC));
     }
 
     @Override
     public int getUseDuration(ItemStack stack, LivingEntity livingEntity) {
-        return 100;
+        return 60;
     }
 
     @Override
@@ -34,9 +38,13 @@ public class WandOfMending extends Item {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity livingEntity) {
         if (!world.isClientSide && livingEntity instanceof Player player) {
-            player.setHealth(player.getHealth() + (player.getMaxHealth() * 0.2f) + 4);
-            player.getCooldowns().addCooldown(this, 100);
+            player.setHealth(Math.min(player.getHealth() + (player.getMaxHealth() * 0.75f), player.getMaxHealth()));
+            player.getCooldowns().addCooldown(this, 1200);
         }
         return stack;
+    }
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("item.noahnoahmod.restoration_wand.tooltip1"));
     }
 }

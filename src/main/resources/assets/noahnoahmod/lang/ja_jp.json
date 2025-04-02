@@ -2,6 +2,12 @@
   "item.noahnoahmod.poison_sword": "毒の剣",
   "item_group.noahnoahmod.creativetabs": "のあMod",
   "item.noahnoahmod.vampire_sword": "吸血剣",
-  "item.noahnoahmod.wand_of_healing": "回復の杖",
-  "item.noahnoahmod.wand_of_mending": "修復の杖"
+  "item.noahnoahmod.healing_wand": "回復の杖",
+  "item.noahnoahmod.mending_wand": "修復の杖",
+  "item.noahnoahmod.restoration_wand": "復元の杖",
+  "item.noahnoahmod.recovery_wand": "治癒の杖",
+  "item.noahnoahmod.healing_wand.tooltip1": "§d使用すると最大体力の25%が回復する",
+  "item.noahnoahmod.mending_wand.tooltip1": "§d使用すると最大体力の50%が回復する",
+  "item.noahnoahmod.restoration_wand.tooltip1": "§d使用すると最大体力の75%が回復する",
+  "item.noahnoahmod.recovery_wand.tooltip1": "§d使用すると体力が全回復する"
 }

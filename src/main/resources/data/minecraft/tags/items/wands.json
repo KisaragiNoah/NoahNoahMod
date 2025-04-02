@@ -1,7 +1,9 @@
 {
   "replace ": false,
   "values": [
-    "noahnoahmod:wand_of_healing",
-    "noahnoahmod:wand_of_mending"
+    "noahnoahmod:healing_wand",
+    "noahnoahmod:mending_wand",
+    "noahnoahmod:restoration_wand",
+    "noahnoahmod:recovery_wand"
   ]
 }

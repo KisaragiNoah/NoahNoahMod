@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "  #",
-    " # ",
+    "  G",
+    " G ",
     "/  "
   ],
   "key": {
-    "#": "minecraft:golden_apple",
+    "G": "minecraft:golden_apple",
     "/": "minecraft:stick"
   },
   "result": {
-    "id": "noahnoahmod:wand_of_healing",
+    "id": "noahnoahmod:healing_wand",
     "count": 1
   }
 }

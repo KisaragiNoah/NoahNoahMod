@@ -1,7 +1,6 @@
 package com.kisaraginoah.noahtorikese.init;
 
 import com.kisaraginoah.noahtorikese.NoahNoahMod;
-import com.kisaraginoah.noahtorikese.items.wand.WandOfMending;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,10 +16,14 @@ public class CreativeTabs {
     static {
         NOAHNOAHMODCREATIVETABS = REGISTER.register("noahnoahmodcreativetabs",
                 () -> CreativeModeTab.builder().title(Component.translatable("item_group.noahnoahmod.creativetabs")).icon(() -> new ItemStack(Blocks.CHERRY_SAPLING)).displayItems((parameters, tabData) -> {
+                    //Sword
                     tabData.accept(ModItems.POISON_SWORD.get());
                     tabData.accept(ModItems.VAMPIRE_SWORD.get());
-                    tabData.accept(ModItems.WAND_OF_HEALING.get());
-                    tabData.accept(ModItems.WAND_OF_MENDING.get());
+                    //Wand
+                    tabData.accept(ModItems.HEALING_WAND.get());
+                    tabData.accept(ModItems.MENDING_WAND.get());
+                    tabData.accept(ModItems.RESTORATION_WAND.get());
+                    tabData.accept(ModItems.RECOVERY_WAND.get());
                 }).withSearchBar().build());
     }
 }

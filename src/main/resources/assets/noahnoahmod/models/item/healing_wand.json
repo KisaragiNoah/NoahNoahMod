@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "noahnoahmod:item/wand_of_mending"
+    "layer0": "noahnoahmod:item/healing_wand"
   }
 }
