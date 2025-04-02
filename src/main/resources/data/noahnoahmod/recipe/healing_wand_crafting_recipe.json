@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "  G",
-    " G ",
+    "  g",
+    " g ",
     "/  "
   ],
   "key": {
-    "G": "minecraft:golden_apple",
+    "g": "minecraft:golden_apple",
     "/": "minecraft:stick"
   },
   "result": {

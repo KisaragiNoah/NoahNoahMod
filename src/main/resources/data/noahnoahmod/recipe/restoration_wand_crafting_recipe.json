@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    " E",
+    " e",
     "/ "
   ],
   "key": {
-    "E": "minecraft:enchanted_golden_apple",
+    "e": "minecraft:enchanted_golden_apple",
     "/": "noahnoahmod:mending_wand"
   },
   "result": {
