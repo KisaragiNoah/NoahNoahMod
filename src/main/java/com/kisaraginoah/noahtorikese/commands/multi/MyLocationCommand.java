@@ -22,7 +22,7 @@ public class MyLocationCommand {
     public static void registerCommand(RegisterCommandsEvent event) {
         CommandDispatcher<CommandSourceStack> dispatcher = event.getDispatcher();
         dispatcher.register(Commands.literal("lm")
-                .requires(source -> source.hasPermission(0)) // すべてのプレイヤーが使用可能
+                .requires(source -> source.hasPermission(0))
                 .executes(context -> {
                     CommandSourceStack source = context.getSource();
                     ServerPlayer player;
