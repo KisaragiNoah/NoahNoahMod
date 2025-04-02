@@ -9,5 +9,6 @@
   "item.noahnoahmod.healing_wand.tooltip1": "§d使用すると最大体力の25%が回復する",
   "item.noahnoahmod.mending_wand.tooltip1": "§d使用すると最大体力の50%が回復する",
   "item.noahnoahmod.restoration_wand.tooltip1": "§d使用すると最大体力の75%が回復する",
-  "item.noahnoahmod.recovery_wand.tooltip1": "§d使用すると体力が全回復する"
+  "item.noahnoahmod.recovery_wand.tooltip1": "§d使用すると体力が全回復する",
+  "item.noahnoahmod.healingsystem.tooltip": "§dチャージ完了時にスニークをしていると1番近いプレイヤーを回復します。"
 }

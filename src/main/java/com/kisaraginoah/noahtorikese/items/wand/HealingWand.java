@@ -35,11 +35,25 @@ public class HealingWand extends Item {
         return InteractionResultHolder.consume(player.getItemInHand(hand));
     }
 
-    //チャージ完了時の処理
+    // チャージ完了時の処理
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity livingEntity) {
         if (!world.isClientSide && livingEntity instanceof Player player) {
-            player.setHealth(Math.min(player.getHealth() + (player.getMaxHealth() * 0.25f), player.getMaxHealth()));
+            if (player.isShiftKeyDown()) {
+                Player nearestPlayer = world.getEntitiesOfClass(Player.class, player.getBoundingBox().inflate(2.0),
+                                otherPlayer -> otherPlayer != player && otherPlayer.isAlive())
+                        .stream()
+                        .findFirst()
+                        .orElse(null);
+
+                if (nearestPlayer != null) {
+                    nearestPlayer.setHealth(Math.min(nearestPlayer.getHealth() + (nearestPlayer.getMaxHealth() * 0.25f), nearestPlayer.getMaxHealth()));
+                } else {
+                    player.setHealth(Math.min(player.getHealth() + (player.getMaxHealth() * 0.25f), player.getMaxHealth()));
+                }
+            } else {
+                player.setHealth(Math.min(player.getHealth() + (player.getMaxHealth() * 0.25f), player.getMaxHealth()));
+            }
             player.getCooldowns().addCooldown(this, 1200);
         }
         return stack;
@@ -56,5 +70,6 @@ public class HealingWand extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         tooltipComponents.add(Component.translatable("item.noahnoahmod.healing_wand.tooltip1"));
+        tooltipComponents.add(Component.translatable("item.noahnoahmod.healingsystem.tooltip"));
     }
 }
