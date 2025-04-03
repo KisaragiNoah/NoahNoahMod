@@ -1,6 +1,7 @@
 package com.kisaraginoah.noahtorikese.init;
 
 import com.kisaraginoah.noahtorikese.NoahNoahMod;
+import com.kisaraginoah.noahtorikese.items.other.RandomBlockChanger;
 import com.kisaraginoah.noahtorikese.items.sword.PoisonSword;
 import com.kisaraginoah.noahtorikese.items.sword.VampireSword;
 import com.kisaraginoah.noahtorikese.items.wand.HealingWand;
@@ -21,4 +22,6 @@ public class ModItems {
     public static final DeferredItem<Item> MENDING_WAND = REGISTER.register("mending_wand", MendingWand::new);
     public static final DeferredItem<Item> RESTORATION_WAND = REGISTER.register("restoration_wand", RestorationWand::new);
     public static final DeferredItem<Item> RECOVERY_WAND = REGISTER.register("recovery_wand", RecoveryWand::new);
+    //Other
+    public static  final  DeferredItem<Item> RANDOM_BLOCK_CHANGER = REGISTER.register("random_block_changer", RandomBlockChanger::new);
 }

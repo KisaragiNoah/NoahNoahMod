@@ -24,6 +24,8 @@ public class CreativeTabs {
                     tabData.accept(ModItems.MENDING_WAND.get());
                     tabData.accept(ModItems.RESTORATION_WAND.get());
                     tabData.accept(ModItems.RECOVERY_WAND.get());
+                    //Other
+                    tabData.accept(ModItems.RANDOM_BLOCK_CHANGER.get());
                 }).withSearchBar().build());
     }
 }

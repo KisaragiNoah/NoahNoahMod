@@ -70,7 +70,7 @@ public class MendingWand extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         tooltipComponents.add(Component.translatable("item.noahnoahmod.mending_wand.tooltip1"));
-        tooltipComponents.add(Component.translatable("item.noahnoahmod.healingsystem.tooltip"));
+        tooltipComponents.add(Component.translatable("item.noahnoahmod.healingsystem.tooltip1"));
     }
 
 }
