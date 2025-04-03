@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "noahnoahmod:block/item_zousyoku_block"
+  }
+}

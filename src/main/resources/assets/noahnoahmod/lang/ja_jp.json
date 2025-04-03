@@ -13,5 +13,8 @@
   "item.noahnoahmod.healingsystem.tooltip1": "§dチャージ完了時にスニークをしていると1番近いプレイヤーを回復します。",
   "item.noahnoahmod.random_block_changer": "ランダムブロックチェンジャー",
   "item.noahnoahmod.random_block_changer.tooltip1": "§rテスト用アイテム",
-  "item.noahnoahmod.random_block_changer.tooltip2": "§rブロックに向かって使用するとブロックがランダムに置き換わる"
+  "item.noahnoahmod.random_block_changer.tooltip2": "§rブロックに向かって使用するとブロックがランダムに置き換わる",
+  "item.noahnoahmod.item_zousyoku_block": "アイテム増殖ブロック",
+  "block.noahnoahmod.item_zousyoku_block": "アイテム増殖ブロック",
+  "item.noahnoahmod.item_zousyoku_block.tooltip1": "§aこのブロックを右クリックするとメインハンドに持っているアイテムが増える"
 }
