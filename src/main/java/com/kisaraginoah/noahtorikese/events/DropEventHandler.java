@@ -23,7 +23,7 @@ public class DropEventHandler {
         if (event.getSource().getEntity() instanceof Player player) {
             Holder<Enchantment> lootingenchantment = player.level().registryAccess().registryOrThrow(Registries.ENCHANTMENT).getHolderOrThrow(Enchantments.LOOTING);
             int lootingvalue = player.getMainHandItem().getTagEnchantments().getLevel(lootingenchantment);
-            double dropChance = 0.00001 * (1 + lootingvalue * 0.5);
+            double dropChance = 0.0000001 * (1 + lootingvalue * 0.5);
             if (random.nextDouble() < dropChance) {
                 ItemStack dropItem = new ItemStack(ModItems.ITEM_ZOUSYOKU_BLOCK.get());
                 ItemEntity itemEntity = new ItemEntity(
