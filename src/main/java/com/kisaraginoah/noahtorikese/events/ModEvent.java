@@ -1,4 +1,4 @@
-package com.kisaraginoah.noahtorikese.event;
+package com.kisaraginoah.noahtorikese.events;
 
 import com.kisaraginoah.noahtorikese.init.ModPotion;
 import net.minecraft.world.item.Items;

@@ -1,6 +1,6 @@
 package com.kisaraginoah.noahtorikese;
 
-import com.kisaraginoah.noahtorikese.event.DropEventHandler;
+import com.kisaraginoah.noahtorikese.events.DropEventHandler;
 import com.kisaraginoah.noahtorikese.init.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;

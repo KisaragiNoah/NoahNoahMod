@@ -1,4 +1,4 @@
-package com.kisaraginoah.noahtorikese.event;
+package com.kisaraginoah.noahtorikese.events;
 
 import com.kisaraginoah.noahtorikese.init.ModItems;
 import net.minecraft.core.Holder;

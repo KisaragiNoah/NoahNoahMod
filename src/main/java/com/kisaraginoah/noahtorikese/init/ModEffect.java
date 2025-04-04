@@ -1,7 +1,7 @@
 package com.kisaraginoah.noahtorikese.init;
 
 import com.kisaraginoah.noahtorikese.NoahNoahMod;
-import com.kisaraginoah.noahtorikese.effect.ClimeBlockEffect;
+import com.kisaraginoah.noahtorikese.effects.ClimeBlockEffect;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffect;
