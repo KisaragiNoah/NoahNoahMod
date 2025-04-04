@@ -26,9 +26,10 @@ public class CreativeTabs {
                     tabData.accept(ModItems.RECOVERY_WAND.get());
                     //Other
                     tabData.accept(ModItems.RANDOM_BLOCK_CHANGER.get());
-
                     //Block
                     tabData.accept(ModItems.ITEM_ZOUSYOKU_BLOCK.get());
+                    //Material
+                    tabData.accept(ModItems.ITEM_ZOUSYOKU_ITEM.get());
                 }).withSearchBar().build());
     }
 }

@@ -1,7 +1,9 @@
 {
   "item_group.noahnoahmod.creativetabs": "のあMod",
+
   "item.noahnoahmod.poison_sword": "毒の剣",
   "item.noahnoahmod.vampire_sword": "吸血剣",
+
   "item.noahnoahmod.healing_wand": "回復の杖",
   "item.noahnoahmod.mending_wand": "修復の杖",
   "item.noahnoahmod.restoration_wand": "復元の杖",
@@ -11,10 +13,21 @@
   "item.noahnoahmod.restoration_wand.tooltip1": "§d使用すると最大体力の75%が回復する",
   "item.noahnoahmod.recovery_wand.tooltip1": "§d使用すると体力が全回復する",
   "item.noahnoahmod.healingsystem.tooltip1": "§dチャージ完了時にスニークをしていると1番近いプレイヤーを回復します。",
+
   "item.noahnoahmod.random_block_changer": "ランダムブロックチェンジャー",
-  "item.noahnoahmod.random_block_changer.tooltip1": "§rテスト用アイテム",
-  "item.noahnoahmod.random_block_changer.tooltip2": "§rブロックに向かって使用するとブロックがランダムに置き換わる",
+  "item.noahnoahmod.random_block_changer.tooltip1": "§bテスト用アイテム",
+  "item.noahnoahmod.random_block_changer.tooltip2": "§bブロックに向かって使用するとブロックがランダムに置き換わる",
+
   "item.noahnoahmod.item_zousyoku_block": "アイテム増殖ブロック",
   "block.noahnoahmod.item_zousyoku_block": "アイテム増殖ブロック",
-  "item.noahnoahmod.item_zousyoku_block.tooltip1": "§aこのブロックを右クリックするとメインハンドに持っているアイテムが増える"
+  "item.noahnoahmod.item_zousyoku_block.tooltip1": "§aこのブロックを右クリックするとメインハンドに持っているアイテムが増える",
+
+  "item.noahnoahmod.item_zousyoku_item": "アイテム増殖アイテム",
+  "item.noahnoahmod.item_zousyoku_item.tooltip1": "アイテムを増殖させるアイテム（未完成）",
+
+  "effect.noahnoahmod.climeblock_effect": "壁上り",
+
+  "item.minecraft.potion.effect.climeblock_potion": "壁上りのポーション",
+  "item.minecraft.splash_potion.effect.climeblock_potion": "壁上りのスプラッシュポーション",
+  "item.minecraft.lingering_potion.effect.climeblock_potion": "壁上りの残留ポーション"
 }

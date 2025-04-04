@@ -1,6 +1,7 @@
 package com.kisaraginoah.noahtorikese.init;
 
 import com.kisaraginoah.noahtorikese.NoahNoahMod;
+import com.kisaraginoah.noahtorikese.items.material.ItemZousyokuItem;
 import com.kisaraginoah.noahtorikese.items.other.RandomBlockChanger;
 import com.kisaraginoah.noahtorikese.items.sword.PoisonSword;
 import com.kisaraginoah.noahtorikese.items.sword.VampireSword;
@@ -28,4 +29,6 @@ public class ModItems {
     //Block
     public static final DeferredItem<Item> ITEM_ZOUSYOKU_BLOCK = REGISTER.register("item_zousyoku_block",
             () -> new BlockItem(ModBlocks.ITEM_ZOUSYOKU_BLOCK.get(), new Item.Properties()));
+    //Material
+    public static final DeferredItem<Item> ITEM_ZOUSYOKU_ITEM = REGISTER.register("item_zousyoku_item", ItemZousyokuItem::new);
 }
