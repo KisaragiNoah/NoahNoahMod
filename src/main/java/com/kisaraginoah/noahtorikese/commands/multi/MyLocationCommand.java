@@ -34,7 +34,8 @@ public class MyLocationCommand {
                     }
 
                     // OPではないプレイヤーにクールダウンを適用
-                    if (!player.hasPermissions(2)) { // OPレベル2未満 (通常のプレイヤー)
+                    //パーミッション２を許可
+                    if (!player.hasPermissions(2)) {
                         UUID playerUUID = player.getUUID();
                         long currentTime = System.currentTimeMillis();
 

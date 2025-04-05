@@ -47,12 +47,12 @@ public class MendingWand extends Item {
                         .orElse(null);
 
                 if (nearestPlayer != null) {
-                    nearestPlayer.setHealth(Math.min(nearestPlayer.getHealth() + (nearestPlayer.getMaxHealth() * 0.25f), nearestPlayer.getMaxHealth()));
+                    nearestPlayer.setHealth(Math.min(nearestPlayer.getHealth() + (nearestPlayer.getMaxHealth() * 0.50f), nearestPlayer.getMaxHealth()));
                 } else {
-                    player.setHealth(Math.min(player.getHealth() + (player.getMaxHealth() * 0.25f), player.getMaxHealth()));
+                    player.setHealth(Math.min(player.getHealth() + (player.getMaxHealth() * 0.50f), player.getMaxHealth()));
                 }
             } else {
-                player.setHealth(Math.min(player.getHealth() + (player.getMaxHealth() * 0.25f), player.getMaxHealth()));
+                player.setHealth(Math.min(player.getHealth() + (player.getMaxHealth() * 0.50f), player.getMaxHealth()));
             }
             player.getCooldowns().addCooldown(this, 1200);
         }
@@ -71,6 +71,7 @@ public class MendingWand extends Item {
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         tooltipComponents.add(Component.translatable("item.noahnoahmod.mending_wand.tooltip1"));
         tooltipComponents.add(Component.translatable("item.noahnoahmod.healingsystem.tooltip1"));
+        tooltipComponents.add(Component.translatable("item.noahnoahmod.healingsystem.tooltip2"));
     }
 
 }

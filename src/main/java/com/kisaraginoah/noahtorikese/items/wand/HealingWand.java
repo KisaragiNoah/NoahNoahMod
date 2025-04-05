@@ -71,5 +71,6 @@ public class HealingWand extends Item {
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         tooltipComponents.add(Component.translatable("item.noahnoahmod.healing_wand.tooltip1"));
         tooltipComponents.add(Component.translatable("item.noahnoahmod.healingsystem.tooltip1"));
+        tooltipComponents.add(Component.translatable("item.noahnoahmod.healingsystem.tooltip2"));
     }
 }
