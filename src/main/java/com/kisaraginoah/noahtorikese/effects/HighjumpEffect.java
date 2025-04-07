@@ -26,7 +26,7 @@ public class HighjumpEffect extends MobEffect {
                     player.level().addParticle(ParticleTypes.CLOUD, true, player.getX(), player.getY(), player.getZ(), 0, 0, 0);
                 }
             } else if (ShiftPressTime >= 5 && player.onGround()) {
-                double jumpHeight = Math.floor(Math.min((double)ShiftPressTime / 10, 50.0));
+                double jumpHeight = Math.floor(Math.min((double)ShiftPressTime / 5, 40.0));
                 double MotionY = 0.42D + (jumpHeight * 0.1);
                 player.setDeltaMovement(new Vec3(player.getDeltaMovement().x(), MotionY, player.getDeltaMovement().z()));
                 player.hasImpulse = true;
