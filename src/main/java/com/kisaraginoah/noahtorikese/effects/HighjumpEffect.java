@@ -1,5 +1,7 @@
 package com.kisaraginoah.noahtorikese.effects;
 
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -19,6 +21,10 @@ public class HighjumpEffect extends MobEffect {
         if (entity instanceof Player player && player.level().isClientSide) {
             if (player.isShiftKeyDown()) {
                 ShiftPressTime++;
+                if (ShiftPressTime % 5 == 0) {
+                    player.playSound(SoundEvents.EGG_THROW, 0.7f, 0.6f);
+                    player.level().addParticle(ParticleTypes.CLOUD, true, player.getX(), player.getY(), player.getZ(), 0, 0, 0);
+                }
             } else if (ShiftPressTime >= 5 && player.onGround()) {
                 double jumpHeight = Math.floor(Math.min((double)ShiftPressTime / 10, 50.0));
                 double MotionY = 0.42D + (jumpHeight * 0.1);
