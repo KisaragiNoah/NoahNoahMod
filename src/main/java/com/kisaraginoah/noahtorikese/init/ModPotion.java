@@ -13,4 +13,6 @@ public class ModPotion {
     public static final Holder<Potion> CLIMEBLOCK_POTION = REGISTER.register("climeblock_potion",
             () -> new Potion(new MobEffectInstance(ModEffect.CLIMEBLOCK_EFFECT, 1200, 0)));
 
+    public static final Holder<Potion> SKATE_POTION = REGISTER.register("skate_potion",
+            () -> new Potion(new MobEffectInstance(ModEffect.SKATE_EFFECT, 1200, 0)));
 }

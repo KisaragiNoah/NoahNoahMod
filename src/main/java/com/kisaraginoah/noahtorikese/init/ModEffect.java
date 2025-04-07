@@ -2,6 +2,7 @@ package com.kisaraginoah.noahtorikese.init;
 
 import com.kisaraginoah.noahtorikese.NoahNoahMod;
 import com.kisaraginoah.noahtorikese.effects.ClimeBlockEffect;
+import com.kisaraginoah.noahtorikese.effects.SkateEffect;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffect;
@@ -13,4 +14,7 @@ public class ModEffect {
 
     public static final Holder<MobEffect> CLIMEBLOCK_EFFECT = REGISTER.register(
             "climeblock_effect", () -> new ClimeBlockEffect(MobEffectCategory.NEUTRAL, 0x36ebab));
+
+    public static final Holder<MobEffect> SKATE_EFFECT = REGISTER.register(
+            "skate_effect", () -> new SkateEffect(MobEffectCategory.NEUTRAL, 0xf800f8));
 }

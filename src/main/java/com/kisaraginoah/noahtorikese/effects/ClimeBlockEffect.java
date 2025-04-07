@@ -12,7 +12,7 @@ public class ClimeBlockEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-        if(entity.horizontalCollision) {
+        if (entity.horizontalCollision) {
             entity.setDeltaMovement(new Vec3(entity.getDeltaMovement().x, 0.2D, entity.getDeltaMovement().z)
                     .scale(0.96D));
             return true;

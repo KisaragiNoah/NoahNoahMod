@@ -26,9 +26,13 @@
   "item.noahnoahmod.item_zousyoku_item": "アイテム増殖アイテム",
   "item.noahnoahmod.item_zousyoku_item.tooltip1": "アイテムを増殖させるアイテム（未完成）",
 
-  "effect.noahnoahmod.climeblock_effect": "壁上り",
-
   "item.minecraft.potion.effect.climeblock_potion": "壁上りのポーション",
   "item.minecraft.splash_potion.effect.climeblock_potion": "壁上りのスプラッシュポーション",
-  "item.minecraft.lingering_potion.effect.climeblock_potion": "壁上りの残留ポーション"
+  "item.minecraft.lingering_potion.effect.climeblock_potion": "壁上りの残留ポーション",
+  "effect.noahnoahmod.climeblock_effect": "壁上り",
+
+  "item.minecraft.potion.effect.skate_potion": "滑りのポーション",
+  "item.minecraft.splash_potion.effect.skate_potion": "滑りのポーション",
+  "item.minecraft.lingering_potion.effect.skate_potion": "滑りのポーション",
+  "effect.noahnoahmod.skate_effect": "滑り"
 }
