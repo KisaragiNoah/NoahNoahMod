@@ -17,4 +17,7 @@ public class ModEffect {
 
     public static final Holder<MobEffect> SKATE_EFFECT = REGISTER.register(
             "skate_effect", () -> new SkateEffect(MobEffectCategory.NEUTRAL, 0xf800f8));
+
+    public static final Holder<MobEffect> HIGHJUMP_EFFECT = REGISTER.register(
+            "highjump_effect", () -> new SkateEffect(MobEffectCategory.NEUTRAL, 0xf800f8));
 }

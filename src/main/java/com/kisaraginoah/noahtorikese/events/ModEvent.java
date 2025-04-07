@@ -16,5 +16,6 @@ public class ModEvent {
 
         builder.addMix(Potions.AWKWARD, Items.SPIDER_EYE, ModPotion.CLIMEBLOCK_POTION);
         builder.addMix(Potions.AWKWARD, Items.BLUE_ICE, ModPotion.SKATE_POTION);
+        builder.addMix(Potions.AWKWARD, Items.RABBIT_FOOT, ModPotion.HIGHJUMP_POTION);
     }
 }
