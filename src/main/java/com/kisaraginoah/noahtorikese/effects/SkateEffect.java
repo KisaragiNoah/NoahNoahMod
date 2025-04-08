@@ -18,7 +18,7 @@ public class SkateEffect extends MobEffect {
     public boolean applyEffectTick(LivingEntity entity, int amplifier) {
         if (entity instanceof Player player && player.level().isClientSide && player.onGround()) {
             Vec3 motion = player.getDeltaMovement();
-            player.setDeltaMovement(motion.x * 2.0, motion.y, motion.z * 2.0);
+            player.setDeltaMovement(motion.x * 1.6, motion.y, motion.z * 1.6);
         }
         return super.applyEffectTick(entity, amplifier);
     }
