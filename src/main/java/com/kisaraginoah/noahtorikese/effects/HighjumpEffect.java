@@ -28,7 +28,7 @@ public class HighjumpEffect extends MobEffect {
                 player.hasImpulse = true;
                 ShiftPressTime = 0;
             }
-            if (ShiftPressTime % 5 == 0 && ShiftPressTime != 0) {
+            if (ShiftPressTime % 5 == 0 && ShiftPressTime != 0 && ShiftPressTime <= 200) {
                 player.playSound(SoundEvents.EGG_THROW, 0.7f, 0.6f);
                 player.level().addParticle(ParticleTypes.CLOUD, true, player.getX(), player.getY(), player.getZ(), 0, 0, 0);
                 player.level().addParticle(ParticleTypes.CLOUD, true, player.getX() + 0.1, player.getY(), player.getZ(), 0, 0, 0);
