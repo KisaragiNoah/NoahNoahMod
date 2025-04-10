@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.kisaraginoah.noahtorikese.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EntityMixin",
+    "LivingEntityMixin"
+  ],
+  "client": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
