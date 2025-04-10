@@ -18,4 +18,7 @@ public class ModPotion {
 
     public static final Holder<Potion> HIGHJUMP_POTION = REGISTER.register("highjump_potion",
             () -> new Potion(new MobEffectInstance(ModEffect.HIGHJUMP_EFFECT, 1200, 0)));
+
+    public static final Holder<Potion> SLIMEBOUNCE_POTION = REGISTER.register("slimebounce_potion",
+            () -> new Potion((new MobEffectInstance(ModEffect.SLIMEBOUNCE_EFFECT, 1200, 0))));
 }

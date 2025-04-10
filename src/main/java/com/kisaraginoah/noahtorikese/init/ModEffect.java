@@ -4,6 +4,7 @@ import com.kisaraginoah.noahtorikese.NoahNoahMod;
 import com.kisaraginoah.noahtorikese.effects.ClimeBlockEffect;
 import com.kisaraginoah.noahtorikese.effects.HighjumpEffect;
 import com.kisaraginoah.noahtorikese.effects.SkateEffect;
+import com.kisaraginoah.noahtorikese.effects.SlimeBounceEffect;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffect;
@@ -21,4 +22,7 @@ public class ModEffect {
 
     public static final Holder<MobEffect> HIGHJUMP_EFFECT = REGISTER.register(
             "highjump_effect", () -> new HighjumpEffect(MobEffectCategory.NEUTRAL, 0xf85348));
+
+    public static final Holder<MobEffect> SLIMEBOUNCE_EFFECT = REGISTER.register(
+            "slimebounce_effect", () -> new SlimeBounceEffect(MobEffectCategory.NEUTRAL, 0x833efd));
 }
