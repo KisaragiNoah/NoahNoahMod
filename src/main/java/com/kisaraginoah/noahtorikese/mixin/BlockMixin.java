@@ -13,6 +13,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.Objects;
+
 @Mixin(Block.class)
 public class BlockMixin {
     @Inject(method = "fallOn", at = @At("HEAD"), cancellable = true)
@@ -20,9 +22,8 @@ public class BlockMixin {
         if (!(entity instanceof LivingEntity livingEntity))
             return;
 
-        if (!livingEntity.hasEffect(ModEffect.SLIMEBOUNCE_EFFECT)) {
+        if (!livingEntity.hasEffect(ModEffect.SLIMEBOUNCE_EFFECT) && !livingEntity.onGround())
             return;
-        }
 
         var motion = livingEntity.getKnownMovement();
         var speed = motion.multiply(0F, 1F, 0F).y();
@@ -37,10 +38,10 @@ public class BlockMixin {
 
     @Inject(method = "updateEntityAfterFallOn", at = @At("HEAD"), cancellable = true)
     public void onEntityFall(BlockGetter getter, Entity entity, CallbackInfo ci) {
-       if (!(entity instanceof LivingEntity livingEntity))
-           return;
+        if (!(entity instanceof LivingEntity livingEntity))
+            return;
 
-        if (!livingEntity.hasEffect(ModEffect.SLIMEBOUNCE_EFFECT))
+        if (!livingEntity.hasEffect(ModEffect.SLIMEBOUNCE_EFFECT) || !livingEntity.onGround())
             return;
 
         var motion = livingEntity.getKnownMovement();
@@ -49,7 +50,8 @@ public class BlockMixin {
         if (speed > -0.5D)
             return;
 
-        var power = (livingEntity.getEffect(ModEffect.SLIMEBOUNCE_EFFECT.getDelegate()).getAmplifier() + 1);
+        //amplifier 4 でMAX
+        var power = Math.min((Objects.requireNonNull(livingEntity.getEffect(ModEffect.SLIMEBOUNCE_EFFECT)).getAmplifier() + 1) * 0.1D + 0.7D, 1.1D);
 
         livingEntity.setDeltaMovement(motion.multiply(1D, -power, 1D));
 
