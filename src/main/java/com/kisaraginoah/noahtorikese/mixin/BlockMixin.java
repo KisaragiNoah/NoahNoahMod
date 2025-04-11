@@ -22,7 +22,7 @@ public class BlockMixin {
         if (!(entity instanceof LivingEntity livingEntity))
             return;
 
-        if (!livingEntity.hasEffect(ModEffect.SLIMEBOUNCE_EFFECT) && !livingEntity.onGround())
+        if (!livingEntity.hasEffect(ModEffect.SLIMEBOUNCE_EFFECT))
             return;
 
         var motion = livingEntity.getKnownMovement();
