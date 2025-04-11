@@ -28,7 +28,7 @@ public class BlockMixin {
         var motion = livingEntity.getKnownMovement();
         var speed = motion.multiply(0F, 1F, 0F).y();
 
-        if (speed > -0.5D)
+        if (speed > -0.1D)
             return;
 
         livingEntity.causeFallDamage(fallDistance, 0F, level.damageSources().fall());
@@ -47,7 +47,7 @@ public class BlockMixin {
         var motion = livingEntity.getKnownMovement();
         var speed = motion.multiply(0F, 1F, 0F).y();
 
-        if (speed > -0.5D)
+        if (speed > -0.1D)
             return;
 
         //amplifier 4 でMAX
