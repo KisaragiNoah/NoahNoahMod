@@ -89,7 +89,8 @@ public class MotionCommand {
                 Vec3 current = livingEntity.getDeltaMovement();
                 livingEntity.setDeltaMovement(current.add(x, y, z));
                 livingEntity.hasImpulse = true;
-                livingEntity.hurtMarked = true;
+                if (livingEntity instanceof Player)
+                    livingEntity.hurtMarked = true;
                 successCount++;
             }
         }
