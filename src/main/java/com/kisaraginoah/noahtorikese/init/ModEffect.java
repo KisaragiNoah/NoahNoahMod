@@ -28,4 +28,7 @@ public class ModEffect {
 
     public static final Holder<MobEffect> SMALLSIZE_EFFECT = REGISTER.register(
             "smallsize_effect", () -> new SmallSizeEffect(MobEffectCategory.NEUTRAL, 0xf3c19d));
+
+    public static final Holder<MobEffect> BERSERKER_EFFECT = REGISTER.register(
+            "berserker_effect", () -> new BerserkerEffect(MobEffectCategory.NEUTRAL, 0xff3423));
 }

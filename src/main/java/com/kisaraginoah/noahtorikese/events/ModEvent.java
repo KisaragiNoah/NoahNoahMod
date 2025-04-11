@@ -21,5 +21,6 @@ public class ModEvent {
         builder.addMix(Potions.AWKWARD, Items.SLIME_BALL, ModPotion.SLIMEBOUNCE_POTION);
         builder.addMix(Potions.AWKWARD, Items.RED_MUSHROOM_BLOCK, ModPotion.BIGSIZE_POTION);
         builder.addMix(Potions.AWKWARD, Items.BROWN_MUSHROOM_BLOCK, ModPotion.SMALLSIZE_POTION);
+        builder.addMix(Potions.AWKWARD, Items.FIRE_CHARGE, ModPotion.BERSERKER_POTION);
     }
 }

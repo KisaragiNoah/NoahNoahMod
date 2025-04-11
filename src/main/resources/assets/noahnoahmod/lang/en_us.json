@@ -49,5 +49,10 @@
   "item.minecraft.potion.effect.smallsize_potion": "小人化のポーション",
   "item.minecraft.splash_potion.effect.smallsize_potion": "小人化のスプラッシュポーション",
   "item.minecraft.lingering_potion.effect.smallsize_potion": "小人化の残留ポーション",
-  "effect.noahnoahmod.smallsize_effect": "小人化"
+  "effect.noahnoahmod.smallsize_effect": "小人化",
+
+  "item.minecraft.potion.effect.berserker_potion": "狂人化のポーション",
+  "item.minecraft.splash_potion.effect.berserker_potion": "狂人化のスプラッシュポーション",
+  "item.minecraft.lingering_potion.effect.berserker_potion": "狂人化の残留ポーション",
+  "effect.noahnoahmod.berserker_effect": "狂人化"
 }

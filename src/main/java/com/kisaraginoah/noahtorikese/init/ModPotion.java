@@ -27,4 +27,7 @@ public class ModPotion {
 
     public static final Holder<Potion> SMALLSIZE_POTION = REGISTER.register("smallsize_potion",
             () -> new Potion(new MobEffectInstance(ModEffect.BIGSIZE_EFFECT, 1200, 0)));
+
+    public static final Holder<Potion> BERSERKER_POTION = REGISTER.register("berserker_potion",
+            () -> new Potion(new MobEffectInstance(ModEffect.BERSERKER_EFFECT, 1200, 0)));
 }
