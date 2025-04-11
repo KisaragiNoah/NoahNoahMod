@@ -10,6 +10,7 @@ import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 
 @EventBusSubscriber
 public class ModEvent {
+
     @SubscribeEvent
     public static void onBrewingRecipeRegister(RegisterBrewingRecipesEvent event) {
         PotionBrewing.Builder builder = event.getBuilder();
@@ -18,5 +19,7 @@ public class ModEvent {
         builder.addMix(Potions.AWKWARD, Items.BLUE_ICE, ModPotion.SKATE_POTION);
         builder.addMix(Potions.AWKWARD, Items.RABBIT_FOOT, ModPotion.HIGHJUMP_POTION);
         builder.addMix(Potions.AWKWARD, Items.SLIME_BALL, ModPotion.SLIMEBOUNCE_POTION);
+        builder.addMix(Potions.AWKWARD, Items.RED_MUSHROOM_BLOCK, ModPotion.BIGSIZE_POTION);
+        builder.addMix(Potions.AWKWARD, Items.BROWN_MUSHROOM_BLOCK, ModPotion.SMALLSIZE_POTION);
     }
 }

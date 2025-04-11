@@ -20,5 +20,11 @@ public class ModPotion {
             () -> new Potion(new MobEffectInstance(ModEffect.HIGHJUMP_EFFECT, 1200, 0)));
 
     public static final Holder<Potion> SLIMEBOUNCE_POTION = REGISTER.register("slimebounce_potion",
-            () -> new Potion((new MobEffectInstance(ModEffect.SLIMEBOUNCE_EFFECT, 1200, 0))));
+            () -> new Potion(new MobEffectInstance(ModEffect.SLIMEBOUNCE_EFFECT, 1200, 0)));
+
+    public static final Holder<Potion> BIGSIZE_POTION = REGISTER.register("bigsize_potion",
+            () -> new Potion(new MobEffectInstance(ModEffect.BIGSIZE_EFFECT, 1200, 0)));
+
+    public static final Holder<Potion> SMALLSIZE_POTION = REGISTER.register("smallsize_potion",
+            () -> new Potion(new MobEffectInstance(ModEffect.BIGSIZE_EFFECT, 1200, 0)));
 }

@@ -1,10 +1,7 @@
 package com.kisaraginoah.noahtorikese.init;
 
 import com.kisaraginoah.noahtorikese.NoahNoahMod;
-import com.kisaraginoah.noahtorikese.effects.ClimeBlockEffect;
-import com.kisaraginoah.noahtorikese.effects.HighjumpEffect;
-import com.kisaraginoah.noahtorikese.effects.SkateEffect;
-import com.kisaraginoah.noahtorikese.effects.SlimeBounceEffect;
+import com.kisaraginoah.noahtorikese.effects.*;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffect;
@@ -25,4 +22,10 @@ public class ModEffect {
 
     public static final Holder<MobEffect> SLIMEBOUNCE_EFFECT = REGISTER.register(
             "slimebounce_effect", () -> new SlimeBounceEffect(MobEffectCategory.NEUTRAL, 0x833efd));
+
+    public static final Holder<MobEffect> BIGSIZE_EFFECT = REGISTER.register(
+            "bigsize_effect", () -> new BigSizeEffect(MobEffectCategory.NEUTRAL, 0x2f1c93));
+
+    public static final Holder<MobEffect> SMALLSIZE_EFFECT = REGISTER.register(
+            "smallsize_effect", () -> new SmallSizeEffect(MobEffectCategory.NEUTRAL, 0xf3c19d));
 }

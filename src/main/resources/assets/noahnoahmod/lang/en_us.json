@@ -39,5 +39,15 @@
   "item.minecraft.potion.effect.highjump_potion": "スーパージャンプのポーション",
   "item.minecraft.splash_potion.effect.highjump_potion": "スーパージャンプのスプラッシュポーション",
   "item.minecraft.lingering_potion.effect.highjump_potion": "スーパージャンプの残留ポーション",
-  "effect.noahnoahmod.highjump_effect": "スーパージャンプ"
+  "effect.noahnoahmod.highjump_effect": "スーパージャンプ",
+
+  "item.minecraft.potion.effect.bigsize_potion": "巨大化のポーション",
+  "item.minecraft.splash_potion.effect.bigsize_potion": "巨大化のスプラッシュポーション",
+  "item.minecraft.lingering_potion.effect.bigsize_potion": "巨大化の残留ポーション",
+  "effect.noahnoahmod.bigsize_effect": "巨大化",
+
+  "item.minecraft.potion.effect.smallsize_potion": "小人化のポーション",
+  "item.minecraft.splash_potion.effect.smallsize_potion": "小人化のスプラッシュポーション",
+  "item.minecraft.lingering_potion.effect.smallsize_potion": "小人化の残留ポーション",
+  "effect.noahnoahmod.smallsize_effect": "小人化"
 }
