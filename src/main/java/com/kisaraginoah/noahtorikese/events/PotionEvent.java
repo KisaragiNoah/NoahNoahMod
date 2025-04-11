@@ -42,14 +42,16 @@ public class PotionEvent {
                         AttributeModifier.Operation.ADD_VALUE
                 );
                 sizeattributeinstance.addPermanentModifier(modify);
-            } else if (hasSmallsizeEffect && !hasSmallModify) {
+            }
+            if (hasSmallsizeEffect && !hasSmallModify) {
                 AttributeModifier modify = new AttributeModifier(
                         smallsizeid,
                         -((Objects.requireNonNull(livingEntity.getEffect(ModEffect.SMALLSIZE_EFFECT)).getAmplifier() + 1) * 0.1),
                         AttributeModifier.Operation.ADD_VALUE
                 );
                 sizeattributeinstance.addPermanentModifier(modify);
-            } else if (hasBerserkerEffect && !hasBerserkerModify) {
+            }
+            if (hasBerserkerEffect && !hasBerserkerModify) {
                 if (livingEntity.getMaxHealth() / 5 >= livingEntity.getHealth()) {
                     AttributeModifier modify = new AttributeModifier(
                             berserkerid,
@@ -58,11 +60,14 @@ public class PotionEvent {
                     );
                     berserkerattributeinstance.addPermanentModifier(modify);
                 }
-            } else if (!hasBigsizeEffect && hasBigModify) {
+            }
+            if (!hasBigsizeEffect && hasBigModify) {
                 sizeattributeinstance.removeModifier(bigsizeid);
-            } else if (!hasSmallsizeEffect && hasSmallModify) {
+            }
+            if (!hasSmallsizeEffect && hasSmallModify) {
                 sizeattributeinstance.removeModifier(smallsizeid);
-            } else if (!hasBerserkerEffect && hasSmallModify) {
+            }
+            if (!hasBerserkerEffect && hasSmallModify) {
                 berserkerattributeinstance.removeModifier(bigsizeid);
             }
         }
