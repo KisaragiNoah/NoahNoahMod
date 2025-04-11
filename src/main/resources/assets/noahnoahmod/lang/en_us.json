@@ -54,5 +54,10 @@
   "item.minecraft.potion.effect.berserker_potion": "狂人化のポーション",
   "item.minecraft.splash_potion.effect.berserker_potion": "狂人化のスプラッシュポーション",
   "item.minecraft.lingering_potion.effect.berserker_potion": "狂人化の残留ポーション",
-  "effect.noahnoahmod.berserker_effect": "狂人化"
+  "effect.noahnoahmod.berserker_effect": "狂人化",
+
+  "item.minecraft.potion.effect.slimebounce_potion": "バウンドのポーション",
+  "item.minecraft.splash_potion.effect.slimebounce_potion": "バウンドのスプラッシュポーション",
+  "item.minecraft.lingering_potion.effect.slimebounce_potion": "バウンドの残留ポーション",
+  "effect.noahnoahmod.slimebounce_effect": "バウンド"
 }
