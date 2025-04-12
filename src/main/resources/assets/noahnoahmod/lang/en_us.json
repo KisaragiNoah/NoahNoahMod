@@ -59,5 +59,10 @@
   "item.minecraft.potion.effect.slimebounce_potion": "バウンドのポーション",
   "item.minecraft.splash_potion.effect.slimebounce_potion": "バウンドのスプラッシュポーション",
   "item.minecraft.lingering_potion.effect.slimebounce_potion": "バウンドの残留ポーション",
-  "effect.noahnoahmod.slimebounce_effect": "バウンド"
+  "effect.noahnoahmod.slimebounce_effect": "バウンド",
+
+  "item.minecraft.potion.effect.duration_extends_potion": "効果時間延長のポーション",
+  "item.minecraft.splash_potion.effect.duration_extends_potion": "効果時間延長のスプラッシュポーション",
+  "item.minecraft.lingering_potion.effect.duration_extends_potion": "効果時間延長の残留ポーション",
+  "effect.noahnoahmod.duration_extends_effect": "効果時間延長"
 }

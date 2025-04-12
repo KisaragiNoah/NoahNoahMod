@@ -30,4 +30,7 @@ public class ModPotion {
 
     public static final Holder<Potion> BERSERKER_POTION = REGISTER.register("berserker_potion",
             () -> new Potion(new MobEffectInstance(ModEffect.BERSERKER_EFFECT, 1200, 0)));
+
+    public static final Holder<Potion> DURATION_EXTENDS_POTION = REGISTER.register("duration_extends_potion",
+            () -> new Potion(new MobEffectInstance(ModEffect.DURATION_EXTENDS_EFFECT)));
 }

@@ -9,8 +9,7 @@ import com.kisaraginoah.noahtorikese.items.wand.HealingWand;
 import com.kisaraginoah.noahtorikese.items.wand.MendingWand;
 import com.kisaraginoah.noahtorikese.items.wand.RecoveryWand;
 import com.kisaraginoah.noahtorikese.items.wand.RestorationWand;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 

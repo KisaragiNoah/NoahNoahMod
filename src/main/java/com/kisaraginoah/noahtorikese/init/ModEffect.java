@@ -12,13 +12,13 @@ public class ModEffect {
     public static final DeferredRegister<MobEffect> REGISTER = DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, NoahNoahMod.MOD_ID);
 
     public static final Holder<MobEffect> CLIMEBLOCK_EFFECT = REGISTER.register(
-            "climeblock_effect", () -> new ClimeBlockEffect(MobEffectCategory.NEUTRAL, 0x36ebab));
+            "climeblock_effect", () -> new ClimeBlockEffect(MobEffectCategory.BENEFICIAL, 0x36ebab));
 
     public static final Holder<MobEffect> SKATE_EFFECT = REGISTER.register(
             "skate_effect", () -> new SkateEffect(MobEffectCategory.NEUTRAL, 0xf800f8));
 
     public static final Holder<MobEffect> HIGHJUMP_EFFECT = REGISTER.register(
-            "highjump_effect", () -> new HighjumpEffect(MobEffectCategory.NEUTRAL, 0xf85348));
+            "highjump_effect", () -> new HighjumpEffect(MobEffectCategory.BENEFICIAL, 0xf85348));
 
     public static final Holder<MobEffect> SLIMEBOUNCE_EFFECT = REGISTER.register(
             "slimebounce_effect", () -> new SlimeBounceEffect(MobEffectCategory.NEUTRAL, 0x833efd));
@@ -30,5 +30,8 @@ public class ModEffect {
             "smallsize_effect", () -> new SmallSizeEffect(MobEffectCategory.NEUTRAL, 0xf3c19d));
 
     public static final Holder<MobEffect> BERSERKER_EFFECT = REGISTER.register(
-            "berserker_effect", () -> new BerserkerEffect(MobEffectCategory.NEUTRAL, 0xff3423));
+            "berserker_effect", () -> new BerserkerEffect(MobEffectCategory.BENEFICIAL, 0xff3423));
+
+    public static final Holder<MobEffect> DURATION_EXTENDS_EFFECT = REGISTER.register(
+            "duration_extends_effect", () -> new DurationExtendsEffect(MobEffectCategory.BENEFICIAL, 0xfffff));
 }
