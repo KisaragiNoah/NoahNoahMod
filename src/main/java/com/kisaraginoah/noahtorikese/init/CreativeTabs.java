@@ -18,18 +18,12 @@ public class CreativeTabs {
                 () -> CreativeModeTab.builder().title(Component.translatable("item_group.noahnoahmod.creativetabs")).icon(() -> new ItemStack(Blocks.CHERRY_SAPLING)).displayItems((parameters, tabData) -> {
                     //Sword
                     tabData.accept(ModItems.POISON_SWORD.get());
-                    tabData.accept(ModItems.VAMPIRE_SWORD.get());
                     //Wand
                     tabData.accept(ModItems.HEALING_WAND.get());
                     tabData.accept(ModItems.MENDING_WAND.get());
                     tabData.accept(ModItems.RESTORATION_WAND.get());
                     tabData.accept(ModItems.RECOVERY_WAND.get());
-                    //Other
-                    tabData.accept(ModItems.RANDOM_BLOCK_CHANGER.get());
-                    //Block
-                    tabData.accept(ModItems.ITEM_ZOUSYOKU_BLOCK.get());
                     //Material
-                    tabData.accept(ModItems.ITEM_ZOUSYOKU_ITEM.get());
                 }).withSearchBar().build());
     }
 }
