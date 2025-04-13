@@ -23,9 +23,6 @@
   "block.noahnoahmod.item_zousyoku_block": "アイテム増殖ブロック",
   "item.noahnoahmod.item_zousyoku_block.tooltip1": "§aこのブロックを右クリックするとメインハンドに持っているアイテムが増える",
 
-  "item.noahnoahmod.item_zousyoku_item": "アイテム増殖アイテム",
-  "item.noahnoahmod.item_zousyoku_item.tooltip1": "アイテムを増殖させるアイテム（未完成）",
-
   "item.minecraft.potion.effect.climeblock_potion": "壁上りのポーション",
   "item.minecraft.splash_potion.effect.climeblock_potion": "壁上りのスプラッシュポーション",
   "item.minecraft.lingering_potion.effect.climeblock_potion": "壁上りの残留ポーション",

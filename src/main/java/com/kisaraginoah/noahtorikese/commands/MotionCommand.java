@@ -1,4 +1,4 @@
-package com.kisaraginoah.noahtorikese.commands.multi;
+package com.kisaraginoah.noahtorikese.commands;
 
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
