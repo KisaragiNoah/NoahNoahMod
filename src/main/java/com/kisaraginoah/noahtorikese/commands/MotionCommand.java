@@ -96,7 +96,7 @@ public class MotionCommand {
         }
         if (successCount > 0) {
             int finalSuccessCount = successCount;
-            sourceStack.sendSuccess(() -> Component.literal("モーションに " + finalSuccessCount + " 体分ベクトルを加算しました。"), true);
+            sourceStack.sendSuccess(() -> Component.literal(finalSuccessCount + " 体にモーションをを加算しました。"), true);
             return Command.SINGLE_SUCCESS;
         } else {
             sourceStack.sendFailure(Component.literal("モーションを加算できる対象が見つかりませんでした。"));
