@@ -57,5 +57,10 @@
   "item.minecraft.potion.effect.increase_invulnerable_potion": "無敵時間増加のポーション",
   "item.minecraft.splash_potion.effect.increase_invulnerable_potion": "無敵時間増加のスプラッシュポーション",
   "item.minecraft.lingering_potion.effect.increase_invulnerable_potion": "無敵時間増加の残留ポーション",
-  "effect.noahnoahmod.increase_invulnerable_effect": "無敵時間増加"
+  "effect.noahnoahmod.increase_invulnerable_effect": "無敵時間増加",
+
+  "item.minecraft.potion.effect.decrease_invulnerable_potion": "無敵時間減少のポーション",
+  "item.minecraft.splash_potion.effect.decrease_invulnerable_potion": "無敵時間減少のスプラッシュポーション",
+  "item.minecraft.lingering_potion.effect.decrease_invulnerable_potion": "無敵時間減少の残留ポーション",
+  "effect.noahnoahmod.decrease_invulnerable_effect": "無敵時間減少"
 }

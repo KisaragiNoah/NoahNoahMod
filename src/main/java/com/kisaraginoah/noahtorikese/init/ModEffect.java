@@ -33,8 +33,11 @@ public class ModEffect {
             "berserker_effect", () -> new BerserkerEffect(MobEffectCategory.BENEFICIAL, 0xff3423));
 
     public static final Holder<MobEffect> DURATION_EXTENDS_EFFECT = REGISTER.register(
-            "duration_extends_effect", () -> new DurationExtendsEffect(MobEffectCategory.BENEFICIAL, 0xfffff));
+            "duration_extends_effect", () -> new DurationExtendsEffect(MobEffectCategory.BENEFICIAL, 4328932));
 
     public static final Holder<MobEffect> INCREASE_INVULNERABLE_EFFECT = REGISTER.register(
-            "increase_invulnerable_effect", () -> new IncreaseInvulnerableEffect(MobEffectCategory.BENEFICIAL, 0xaaaaff));
+            "increase_invulnerable_effect", () -> new IncreaseInvulnerableEffect(MobEffectCategory.BENEFICIAL, 1564896));
+
+    public static final Holder<MobEffect> DECREASE_INVULNERABLE_EFFECT = REGISTER.register(
+            "decrease_invulnerable_effect", () -> new DecreaseInvulnerableEffect(MobEffectCategory.HARMFUL, 2432523));
 }
