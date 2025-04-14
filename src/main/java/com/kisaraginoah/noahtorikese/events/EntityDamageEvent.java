@@ -24,7 +24,7 @@ public class EntityDamageEvent {
             }
         } else if (entity.hasEffect(ModEffect.DECREASE_INVULNERABLE_EFFECT)) {
             int amplifier = Objects.requireNonNull(entity.getEffect(ModEffect.DECREASE_INVULNERABLE_EFFECT)).getAmplifier();
-            int newInvulTime = entity.invulnerableTime - ((amplifier + 1) * 2);
+            int newInvulTime = entity.invulnerableTime - ((amplifier + 1) * 5);
 
             if (newInvulTime < 0) {
                 newInvulTime = 0;
