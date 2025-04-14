@@ -38,7 +38,6 @@ public class SkateEffect extends MobEffect {
             if (!event.getEntity().hasEffect(ModEffect.SKATE_EFFECT))
                 return;
 
-            System.out.println("1");
             event.setFriction(1.075F);
         }
 
@@ -50,7 +49,6 @@ public class SkateEffect extends MobEffect {
             if (!(event.getEntity() instanceof LivingEntity living) || !living.hasEffect(ModEffect.SKATE_EFFECT))
                 return;
 
-            System.out.println("2");
             event.setSpeedFactor(1F);
         }
     }
