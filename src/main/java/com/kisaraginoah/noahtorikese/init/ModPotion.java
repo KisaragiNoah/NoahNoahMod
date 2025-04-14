@@ -33,4 +33,7 @@ public class ModPotion {
 
     public static final Holder<Potion> DURATION_EXTENDS_POTION = REGISTER.register("duration_extends_potion",
             () -> new Potion(new MobEffectInstance(ModEffect.DURATION_EXTENDS_EFFECT)));
+
+    public static final Holder<Potion> INCREASE_INVULNERABLE_POTION = REGISTER.register("increase_invulnerable_potion",
+            () -> new Potion(new MobEffectInstance(ModEffect.INCREASE_INVULNERABLE_EFFECT,1200 ,0)));
 }

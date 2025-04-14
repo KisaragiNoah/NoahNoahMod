@@ -34,4 +34,7 @@ public class ModEffect {
 
     public static final Holder<MobEffect> DURATION_EXTENDS_EFFECT = REGISTER.register(
             "duration_extends_effect", () -> new DurationExtendsEffect(MobEffectCategory.BENEFICIAL, 0xfffff));
+
+    public static final Holder<MobEffect> INCREASE_INVULNERABLE_EFFECT = REGISTER.register(
+            "increase_invulnerable_effect", () -> new IncreaseInvulnerableEffect(MobEffectCategory.BENEFICIAL, 0xaaaaff));
 }

@@ -23,5 +23,6 @@ public class ModEvent {
         builder.addMix(Potions.AWKWARD, Items.BROWN_MUSHROOM_BLOCK, ModPotion.SMALLSIZE_POTION);
         builder.addMix(Potions.AWKWARD, Items.FIRE_CHARGE, ModPotion.BERSERKER_POTION);
         builder.addMix(Potions.AWKWARD, Items.NETHER_STAR, ModPotion.DURATION_EXTENDS_POTION);
+        builder.addMix(Potions.AWKWARD, Items.TURTLE_SCUTE, ModPotion.INCREASE_INVULNERABLE_POTION);
     }
 }
