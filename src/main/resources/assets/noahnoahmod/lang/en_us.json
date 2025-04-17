@@ -62,5 +62,7 @@
   "item.minecraft.potion.effect.decrease_invulnerable_potion": "無敵時間減少のポーション",
   "item.minecraft.splash_potion.effect.decrease_invulnerable_potion": "無敵時間減少のスプラッシュポーション",
   "item.minecraft.lingering_potion.effect.decrease_invulnerable_potion": "無敵時間減少の残留ポーション",
-  "effect.noahnoahmod.decrease_invulnerable_effect": "無敵時間減少"
+  "effect.noahnoahmod.decrease_invulnerable_effect": "無敵時間減少",
+
+  "item.noahnoahmod.stackable_potion.effect.duration_extends_potion": "スタック可能な効果時間延長のポーション"
 }
