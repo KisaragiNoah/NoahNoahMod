@@ -1,6 +1,7 @@
 package com.kisaraginoah.noahtorikese.init;
 
 import com.kisaraginoah.noahtorikese.NoahNoahMod;
+import com.kisaraginoah.noahtorikese.items.InfiniteTotem;
 import com.kisaraginoah.noahtorikese.items.potion.StackableLingeringPotion;
 import com.kisaraginoah.noahtorikese.items.potion.StackablePotion;
 import com.kisaraginoah.noahtorikese.items.potion.StackableSplashPotion;
@@ -26,4 +27,6 @@ public class ModItems {
     public static final DeferredItem<Item> STACKABLE_POTION = REGISTER.register("stackable_potion", StackablePotion::new);
     public static final DeferredItem<Item> STACKABLE_SPLASH_POTION = REGISTER.register("stackable_splash_potion", StackableSplashPotion::new);
     public static final DeferredItem<Item> STACKABLE_LINGERING_POTION = REGISTER.register("stackable_lingering_potion", StackableLingeringPotion::new);
+    //Test
+    public static final DeferredItem<Item> INFINITE_TOTEM = REGISTER.register("infinite_totem", InfiniteTotem::new);
 }
