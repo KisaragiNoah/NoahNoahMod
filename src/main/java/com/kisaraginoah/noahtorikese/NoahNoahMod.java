@@ -1,6 +1,5 @@
 package com.kisaraginoah.noahtorikese;
 
-import com.kisaraginoah.noahtorikese.init.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -14,11 +13,6 @@ public class NoahNoahMod {
 
     public NoahNoahMod(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
-        ModItems.REGISTER.register(modEventBus);
-        ModBlocks.REGISTER.register(modEventBus);
-        CreativeTabs.REGISTER.register(modEventBus);
-        ModEffect.REGISTER.register(modEventBus);
-        ModPotion.REGISTER.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
