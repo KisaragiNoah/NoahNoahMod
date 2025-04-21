@@ -1,7 +1,7 @@
 package com.kisaraginoah.noahtorikese.event;
 
 import com.kisaraginoah.noahtorikese.init.ModItems;
-import com.kisaraginoah.noahtorikese.util.HandItemFinder;
+import com.kisaraginoah.noahtorikese.util.ItemUtils;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.protocol.game.ClientboundEntityEventPacket;
 import net.minecraft.server.level.ServerLevel;
@@ -34,7 +34,7 @@ public class EntityDeathEvent {
         Level level = livingEntity.level();
 
         if (level.isClientSide) return;
-        ItemStack stack = HandItemFinder.Finder(livingEntity, ModItems.INFINITE_TOTEM.value());
+        ItemStack stack = ItemUtils.HandItemFinder(livingEntity, ModItems.INFINITE_TOTEM.value());
         if (stack.isEmpty()) return;
 
         UUID uuid = livingEntity.getUUID();
