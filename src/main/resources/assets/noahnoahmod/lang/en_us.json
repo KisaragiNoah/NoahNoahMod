@@ -1,3 +1,6 @@
 {
-  "item_group.noahnoahmod.creativetab": "のあのあMod"
+  "item_group.noahnoahmod.creativetab": "のあのあMod",
+  "item.noahnoahmod.infinite_totem": "無限のトーテム",
+  "item.noahnoahmod.infinite_totem.tooltip1": "§a無限に使えるトーテム",
+  "item.noahnoahmod.infinite_totem.tooltip2": "§a使用するたびに10秒クールダウンが発生する"
 }

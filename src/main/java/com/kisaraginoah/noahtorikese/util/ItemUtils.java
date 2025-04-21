@@ -7,7 +7,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class ItemUtils {
     /**
-     * LivingEntityのメインハンドかオフハンドに受け取ったアイテムと同じアイテムがあるかどうかの判定をする
+     * LivingEntityのメインハンドかオフハンドに受け取ったアイテムと同じアイテムがあればそのアイテムを返す
      */
     public static ItemStack HandItemFinder(LivingEntity livingEntity, Item item) {
         for (InteractionHand hand : InteractionHand.values()) {
