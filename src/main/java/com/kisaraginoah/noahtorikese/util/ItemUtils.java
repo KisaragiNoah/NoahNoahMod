@@ -7,9 +7,26 @@ import net.minecraft.world.item.ItemStack;
 
 public class ItemUtils {
     /**
-     * LivingEntityのメインハンドかオフハンドに受け取ったアイテムと同じアイテムがあればそのアイテムを返す
+     * @param livingEntity 検索元のエンティティが
+     * @param item 検索するアイテム
+     * @return Boolean
      */
-    public static ItemStack HandItemFinder(LivingEntity livingEntity, Item item) {
+    public static boolean HandItemFinderBoolean(LivingEntity livingEntity, Item item) {
+        for (InteractionHand hand : InteractionHand.values()) {
+            ItemStack stack = livingEntity.getItemInHand(hand);
+            if (stack.getItem() == item) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * @param livingEntity 検索元のエンティティ
+     * @param item 検索するアイテム
+     * @return ItemStack
+     */
+    public static ItemStack HandItemFinderItemStack(LivingEntity livingEntity, Item item) {
         for (InteractionHand hand : InteractionHand.values()) {
             ItemStack stack = livingEntity.getItemInHand(hand);
             if (stack.getItem() == item) {
@@ -17,5 +34,19 @@ public class ItemUtils {
             }
         }
         return ItemStack.EMPTY;
+    }
+
+    /**
+     * @param livingEntity 検索元のエンティティ
+     * @param item 削除するアイテム
+     */
+    public static void HandItemRemover(LivingEntity livingEntity, Item item) {
+        for (InteractionHand hand : InteractionHand.values()) {
+            ItemStack stack = livingEntity.getItemInHand(hand);
+            if (stack.getItem() == item) {
+                stack.shrink(1);
+                break;
+            }
+        }
     }
 }

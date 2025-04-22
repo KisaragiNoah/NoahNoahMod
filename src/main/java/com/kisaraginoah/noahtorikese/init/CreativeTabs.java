@@ -21,6 +21,7 @@ public class CreativeTabs {
                         .icon(() -> new ItemStack(Blocks.CHERRY_SAPLING))
                         .displayItems((parameters, output) -> {
                             output.accept(ModItems.INFINITE_TOTEM.value());
+                            output.accept(ModItems.SUPER_TOTEM.value());
                         }).withSearchBar().build()
         );
     }
