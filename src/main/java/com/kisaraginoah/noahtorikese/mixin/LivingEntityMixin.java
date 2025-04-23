@@ -67,10 +67,10 @@ public abstract class LivingEntityMixin extends Entity {
         } else if (((mainhand.getItem() == ModItems.INFINITE_TOTEM.value()) || (offhand.getItem() == ModItems.INFINITE_TOTEM.value()))) {
             if (entity instanceof Player player) {
                 if (!player.getCooldowns().isOnCooldown(ModItems.INFINITE_TOTEM.value())) {
-                    player.getCooldowns().addCooldown(ModItems.INFINITE_TOTEM.value(), 100);
                     if (damageSource.type().equals(DamageTypes.FELL_OUT_OF_WORLD)) {
                         cbr.setReturnValue(false);
                     } else {
+                        player.getCooldowns().addCooldown(ModItems.INFINITE_TOTEM.value(), 200);
                         this.setHealth(1.0F);
                         this.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, 1));
                         this.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 100, 1));
