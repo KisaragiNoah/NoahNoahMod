@@ -22,6 +22,7 @@ public class CreativeTabs {
                         .displayItems((parameters, output) -> {
                             output.accept(ModItems.INFINITE_TOTEM.value());
                             output.accept(ModItems.SUPER_TOTEM.value());
+                            output.accept(ModItems.NOFALL_DAMAGE_GEM.value());
                         }).withSearchBar().build()
         );
     }

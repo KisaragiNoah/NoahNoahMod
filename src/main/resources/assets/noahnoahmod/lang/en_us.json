@@ -5,5 +5,7 @@
   "item.noahnoahmod.infinite_totem.tooltip2": "§a使用するたびに10秒クールダウンが発生する",
   "item.noahnoahmod.super_totem": "強化された不死のトーテム",
   "item.noahnoahmod.super_totem.tooltip1": "§a能力が強化された不死のトーテム",
-  "item.noahnoahmod.super_totem.tooltip2": "§a発動時体力が全回復し、10秒間無敵&移動速度が上昇する"
+  "item.noahnoahmod.super_totem.tooltip2": "§a発動時体力が全回復し、10秒間無敵&移動速度が上昇する",
+  "item.noahnoahmod.nofall_damage_gem": "落下ダメージ無効化のジェム",
+  "item.noahnoahmod.nofall_damage.gem.tooltip1": "インベントリ内にある間、落下ダメージを無効化する。"
 }
