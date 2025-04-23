@@ -7,9 +7,10 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -67,8 +68,9 @@ public class MotionCommand {
             if (entity instanceof LivingEntity livingEntity) {
                 livingEntity.setDeltaMovement(new Vec3(x, y, z));
                 livingEntity.hasImpulse = true;
-                if (livingEntity instanceof Player)
-                    livingEntity.hurtMarked = true;
+                if (livingEntity instanceof ServerPlayer serverPlayer) {
+                    serverPlayer.connection.send(new ClientboundSetEntityMotionPacket(serverPlayer));
+                }
                 successCount++;
             }
         }
@@ -89,8 +91,8 @@ public class MotionCommand {
                 Vec3 current = livingEntity.getDeltaMovement();
                 livingEntity.setDeltaMovement(current.add(x, y, z));
                 livingEntity.hasImpulse = true;
-                if (livingEntity instanceof Player)
-                    livingEntity.hurtMarked = true;
+                if (livingEntity instanceof ServerPlayer serverPlayer)
+                    serverPlayer.connection.send(new ClientboundSetEntityMotionPacket(serverPlayer));
                 successCount++;
             }
         }
