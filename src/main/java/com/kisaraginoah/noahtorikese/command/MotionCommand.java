@@ -78,7 +78,7 @@ public class MotionCommand {
             sourceStack.sendSuccess(() -> Component.literal(finalCount + "体にモーションを設定しました。"), true);
             return Command.SINGLE_SUCCESS;
         } else {
-            sourceStack.sendFailure(Component.translatable("command.motion.fail"));
+            sourceStack.sendFailure(Component.translatable("command.motion.failedtarget"));
             return 0;
         }
     }
