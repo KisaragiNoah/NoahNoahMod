@@ -8,7 +8,8 @@
   "item.noahnoahmod.super_totem.tooltip2": "§a発動時体力が全回復し、10秒間無敵&移動速度が上昇する",
   "item.noahnoahmod.nofall_damage_gem": "落下ダメージ無効化のジェム",
   "item.noahnoahmod.nofall_damage.gem.tooltip1": "インベントリ内にある間、落下ダメージを無効化する",
-  "command.motion.failedtarget": "モーションを変更できませんでした",
+  "command.motion.missingtarget": "モーションを変更できませんでした",
   "command.setmaxhealth.failedsetmaxhealth": "最大体力は0以上に設定してください",
-  "command.setmaxhealth.failedtarget": "最大体力を設定できませんでした"
+  "command.setmaxhealth.missingtarget": "最大体力を設定できませんでした",
+  "command.sethealth.missingtarget": "現在体力を設定できませんでした"
 }

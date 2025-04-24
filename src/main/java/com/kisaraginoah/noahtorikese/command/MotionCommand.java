@@ -78,7 +78,7 @@ public class MotionCommand {
             sourceStack.sendSuccess(() -> Component.literal(finalCount + "体にモーションを設定しました。"), true);
             return Command.SINGLE_SUCCESS;
         } else {
-            sourceStack.sendFailure(Component.translatable("command.motion.failedtarget"));
+            sourceStack.sendFailure(Component.translatable("command.motion.missingtarget"));
             return 0;
         }
     }
@@ -98,7 +98,7 @@ public class MotionCommand {
             sourceStack.sendSuccess(() -> Component.literal(finalcount + " 体にモーションをを加算しました。"), true);
             return Command.SINGLE_SUCCESS;
         } else {
-            sourceStack.sendFailure(Component.translatable("command.motion.failedtarget"));
+            sourceStack.sendFailure(Component.translatable("command.motion.missingtarget"));
             return 0;
         }
     }

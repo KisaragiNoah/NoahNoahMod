@@ -69,7 +69,7 @@ public class SetMaxHealthCommand {
             sourceStack.sendSuccess(() -> Component.literal(finalCount + "体の最大体力を" + maxhealth + "に変更しました"), true);
             return Command.SINGLE_SUCCESS;
         } else {
-            sourceStack.sendFailure(Component.translatable("command.setmaxhealth.failedtarget"));
+            sourceStack.sendFailure(Component.translatable("command.setmaxhealth.missingtarget"));
             return 0;
         }
     }
