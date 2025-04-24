@@ -3,6 +3,7 @@ package com.kisaraginoah.noahtorikese.item;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -11,7 +12,7 @@ import java.util.List;
 @ParametersAreNonnullByDefault
 public class NoFallDamageGem extends Item {
     public NoFallDamageGem() {
-        super(new Item.Properties().stacksTo(1).durability(100));
+        super(new Item.Properties().stacksTo(1).durability(100).rarity(Rarity.RARE));
     }
 
     @Override
