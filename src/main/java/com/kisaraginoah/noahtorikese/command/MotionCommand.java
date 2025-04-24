@@ -98,7 +98,7 @@ public class MotionCommand {
             sourceStack.sendSuccess(() -> Component.literal(finalcount + " 体にモーションをを加算しました。"), true);
             return Command.SINGLE_SUCCESS;
         } else {
-            sourceStack.sendFailure(Component.translatable("command.motion.fail"));
+            sourceStack.sendFailure(Component.translatable("command.motion.failedtarget"));
             return 0;
         }
     }
