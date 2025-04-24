@@ -15,6 +15,11 @@ public class NoFallDamageGem extends Item {
     }
 
     @Override
+    public boolean isFoil(ItemStack stack) {
+        return true;
+    }
+
+    @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         tooltipComponents.add(Component.translatable("item.noahnoahmod.nofall_damage.gem.tooltip1"));
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
