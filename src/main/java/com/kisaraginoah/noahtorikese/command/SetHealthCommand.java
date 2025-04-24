@@ -47,7 +47,8 @@ public class SetHealthCommand {
         }
         if (count > 0) {
             float finalHealth = health;
-            sourceStack.sendSuccess(() -> Component.literal(finalHealth + "体の現在HPを " + finalHealth + " に設定しました。"), true);
+            float finalcount = count;
+            sourceStack.sendSuccess(() -> Component.literal(finalcount + "体の現在HPを " + finalHealth + " に設定しました。"), true);
             return Command.SINGLE_SUCCESS;
         } else {
             sourceStack.sendFailure(Component.translatable("command.sethealth.missingtarget"));
