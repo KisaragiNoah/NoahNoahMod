@@ -11,5 +11,6 @@
   "command.motion.missingtarget": "モーションを変更できませんでした",
   "command.setmaxhealth.failedsetmaxhealth": "最大体力は0以上に設定してください",
   "command.setmaxhealth.missingtarget": "最大体力を設定できませんでした",
-  "command.sethealth.missingtarget": "現在体力を設定できませんでした"
+  "command.sethealth.missingtarget": "現在体力を設定できませんでした",
+  "item.noahnoahmod.enchanted_cooked_beef": "強化された焼き肉"
 }
