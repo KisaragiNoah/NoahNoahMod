@@ -14,5 +14,7 @@
   "command.sethealth.missingtarget": "現在体力を設定できませんでした",
   "item.noahnoahmod.enchanted_cooked_beef": "強化された焼き肉",
   "item.noahnoahmod.enchanted_cooked_beef.tooltip1": "§3美味しくなった焼き肉",
-  "item.noahnoahmod.enchanted_cooked_beef.tooltip2": "§3食べるとしばらくの間体力が上昇する"
+  "item.noahnoahmod.enchanted_cooked_beef.tooltip2": "§3食べるとしばらくの間体力が上昇する",
+  "item.noahnoahmod.over_damage_blocker": "大ダメージブロッカー",
+  "item.noahnoahmod.over_damage_blocker.tooltip1": "§c現在の最大体力を超えるダメージを受けた際にそのダメージを無効化する"
 }

@@ -1,0 +1,11 @@
+{
+  "music.ohanabatake": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "music/ohanabatake",
+        "stream": true
+      }
+    ]
+  }
+}
