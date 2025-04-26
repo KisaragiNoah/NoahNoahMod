@@ -1,8 +1,8 @@
 package com.kisaraginoah.noahtorikese.mixin;
 
 import com.kisaraginoah.noahtorikese.init.ModItems;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -48,7 +48,7 @@ public abstract class LivingEntityMixin extends Entity {
         ItemStack offhand = ((LivingEntityMixin) entity).getOffhandItem();
 
         if ((mainhand.getItem() == ModItems.SUPER_TOTEM.value()) || (offhand.getItem() == ModItems.SUPER_TOTEM.value())) {
-            if (damageSource.type().equals(DamageTypes.FELL_OUT_OF_WORLD)) {
+            if (damageSource.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
                 cbr.setReturnValue(false);
             } else {
                 if ((mainhand.getItem() == ModItems.SUPER_TOTEM.value())) {
@@ -67,7 +67,7 @@ public abstract class LivingEntityMixin extends Entity {
         } else if (((mainhand.getItem() == ModItems.INFINITE_TOTEM.value()) || (offhand.getItem() == ModItems.INFINITE_TOTEM.value()))) {
             if (entity instanceof Player player) {
                 if (!player.getCooldowns().isOnCooldown(ModItems.INFINITE_TOTEM.value())) {
-                    if (damageSource.type().equals(DamageTypes.FELL_OUT_OF_WORLD)) {
+                    if (damageSource.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
                         cbr.setReturnValue(false);
                     } else {
                         player.getCooldowns().addCooldown(ModItems.INFINITE_TOTEM.value(), 200);
