@@ -94,8 +94,8 @@ public class MotionCommand {
             count++;
         }
         if (count > 0) {
-            int finalcount = count;
-            sourceStack.sendSuccess(() -> Component.literal(finalcount + " 体にモーションをを加算しました。"), true);
+            int finalCount = count;
+            sourceStack.sendSuccess(() -> Component.literal(finalCount + " 体にモーションをを加算しました。"), true);
             return Command.SINGLE_SUCCESS;
         } else {
             sourceStack.sendFailure(Component.translatable("command.motion.missingtarget"));

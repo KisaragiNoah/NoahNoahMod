@@ -15,7 +15,7 @@ import java.util.List;
 @ParametersAreNonnullByDefault
 public class EnchantedCookedBeef extends Item {
     public EnchantedCookedBeef() {
-        super(new Properties().food(new FoodProperties.Builder().nutrition(16).saturationModifier(1.0F).effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 9600, 3), 1.0F).build()).stacksTo(64).rarity(Rarity.RARE));
+        super(new Properties().food(new FoodProperties.Builder().nutrition(12).saturationModifier(0.9F).effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 6000, 1), 1.0F).build()).stacksTo(64).rarity(Rarity.RARE));
     }
 
     @Override
