@@ -41,7 +41,7 @@ public abstract class LivingEntityMixin extends Entity {
     }
 
     @Inject(method = "checkTotemDeathProtection", at = @At("HEAD"), cancellable = true)
-    public void useSuperTotem(DamageSource damageSource, CallbackInfoReturnable<Boolean> cbr) {
+    public void useSuperTotem(DamageSource damageSource, CallbackInfoReturnable<Boolean> cir) {
         Entity entity = this;
 
         ItemStack mainhand = ((LivingEntityMixin) entity).getMainHandItem();
@@ -49,7 +49,7 @@ public abstract class LivingEntityMixin extends Entity {
 
         if ((mainhand.getItem() == ModItems.SUPER_TOTEM.value()) || (offhand.getItem() == ModItems.SUPER_TOTEM.value())) {
             if (damageSource.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
-                cbr.setReturnValue(false);
+                cir.setReturnValue(false);
             } else {
                 if ((mainhand.getItem() == ModItems.SUPER_TOTEM.value())) {
                     mainhand.shrink(1);
@@ -62,13 +62,13 @@ public abstract class LivingEntityMixin extends Entity {
                 this.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 100));
                 this.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 7));
                 this.level().broadcastEntityEvent(this, (byte)35);
-                cbr.setReturnValue(true);
+                cir.setReturnValue(true);
             }
         } else if (((mainhand.getItem() == ModItems.INFINITE_TOTEM.value()) || (offhand.getItem() == ModItems.INFINITE_TOTEM.value()))) {
             if (entity instanceof Player player) {
                 if (!player.getCooldowns().isOnCooldown(ModItems.INFINITE_TOTEM.value())) {
                     if (damageSource.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
-                        cbr.setReturnValue(false);
+                        cir.setReturnValue(false);
                     } else {
                         player.getCooldowns().addCooldown(ModItems.INFINITE_TOTEM.value(), 200);
                         this.setHealth(1.0F);
@@ -76,7 +76,7 @@ public abstract class LivingEntityMixin extends Entity {
                         this.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 100, 1));
                         this.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
                         this.level().broadcastEntityEvent(this, (byte)35);
-                        cbr.setReturnValue(true);
+                        cir.setReturnValue(true);
                     }
                 }
             }
