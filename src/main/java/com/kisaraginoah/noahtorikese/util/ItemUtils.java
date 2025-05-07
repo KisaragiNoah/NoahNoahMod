@@ -1,5 +1,6 @@
 package com.kisaraginoah.noahtorikese.util;
 
+import com.kisaraginoah.noahtorikese.init.ModItems;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
@@ -48,5 +49,13 @@ public class ItemUtils {
                 break;
             }
         }
+    }
+
+    /**
+     * @param itemStack トーテムアイテム
+     */
+    public static boolean isCustomTotem(ItemStack itemStack) {
+        return itemStack.is(ModItems.SUPER_TOTEM.value()) ||
+                itemStack.is(ModItems.INFINITE_TOTEM.value());
     }
 }
