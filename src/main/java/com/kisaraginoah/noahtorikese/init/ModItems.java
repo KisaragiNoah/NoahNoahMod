@@ -14,7 +14,6 @@ public class ModItems {
     public static final Holder<Item> SUPER_TOTEM = REGISTER.register("super_totem", SuperTotem::new);
     public static final Holder<Item> NOFALL_DAMAGE_GEM = REGISTER.register("nofall_damage_gem", NoFallDamageGem::new);
     public static final Holder<Item> OVER_DAMAGE_BLOCKER = REGISTER.register("over_damage_blocker", OverDamageBlocker::new);
-
     //Food
     public static final Holder<Item> ENCHANTED_COOKED_BEEF = REGISTER.register("enchanted_cooked_beef", EnchantedCookedBeef::new);
 }
