@@ -13,7 +13,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.EffectCure;
 import net.neoforged.neoforge.common.EffectCures;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -33,8 +32,6 @@ public abstract class LivingEntityMixin extends Entity {
     @Shadow public abstract boolean removeEffectsCuredBy(EffectCure cure);
 
     @Shadow public abstract boolean addEffect(MobEffectInstance effectInstance);
-
-    @Shadow public abstract boolean addEffect(MobEffectInstance effectInstance, @Nullable Entity entity);
 
     public LivingEntityMixin(EntityType<?> entityType, Level level) {
         super(entityType, level);
