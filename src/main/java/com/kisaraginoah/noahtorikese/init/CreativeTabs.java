@@ -27,6 +27,7 @@ public class CreativeTabs {
                             output.accept(ModItems.ENCHANTED_COOKED_BEEF.value());
                             output.accept(ModItems.OVER_DAMAGE_BLOCKER.value());
                             output.accept(ModItems.KNOCK_BACK_STICK.value());
+                            output.accept(ModItems.POSE_CHANGER.value());
                         }).withSearchBar().build()
         );
 //        NOAHNOAHMODRECORDTABS = REGISTER.register(
