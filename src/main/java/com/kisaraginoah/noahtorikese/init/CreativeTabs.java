@@ -5,6 +5,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -13,7 +14,7 @@ public class CreativeTabs {
     public static final DeferredRegister<CreativeModeTab> REGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, NoahNoahMod.MOD_ID);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NOAHNOAHMODTABS;
-//    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NOAHNOAHMODRECORDTABS;
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NOAHNOAHMODRECORDTABS;
 
     static {
         NOAHNOAHMODTABS = REGISTER.register(
@@ -30,12 +31,13 @@ public class CreativeTabs {
                             output.accept(ModItems.POSE_CHANGER.value());
                         }).withSearchBar().build()
         );
-//        NOAHNOAHMODRECORDTABS = REGISTER.register(
-//                "noahnoahmod_recordtab",
-//                () -> CreativeModeTab.builder().title(Component.translatable("item_group.noahnoahmod.recordtab"))
-//                        .icon(() -> new ItemStack(Items.MUSIC_DISC_CAT))
-//                        .displayItems((parameters, output) -> {
-//                }).withSearchBar().build()
-//        );
+        NOAHNOAHMODRECORDTABS = REGISTER.register(
+                "noahnoahmod_recordtab",
+                () -> CreativeModeTab.builder().title(Component.translatable("item_group.noahnoahmod.recordtab"))
+                        .icon(() -> new ItemStack(Items.MUSIC_DISC_CAT))
+                        .displayItems((parameters, output) -> {
+                            output.accept(ModItems.OHANABATAKE_MUSIC_DISC.value());
+                }).withSearchBar().build()
+        );
     }
 }

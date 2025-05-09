@@ -2,6 +2,7 @@ package com.kisaraginoah.noahtorikese.init;
 
 import com.kisaraginoah.noahtorikese.NoahNoahMod;
 import com.kisaraginoah.noahtorikese.item.*;
+import com.kisaraginoah.noahtorikese.item.record.OhanabatakeMusicDisc;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
@@ -18,4 +19,6 @@ public class ModItems {
     public static final Holder<Item> POSE_CHANGER = REGISTER.register("pose_changer", PoseChanger::new);
     //Food
     public static final Holder<Item> ENCHANTED_COOKED_BEEF = REGISTER.register("enchanted_cooked_beef", EnchantedCookedBeef::new);
+    //Music Disc
+    public static final Holder<Item> OHANABATAKE_MUSIC_DISC = REGISTER.register("ohanabatake_music_disc", OhanabatakeMusicDisc::new);
 }

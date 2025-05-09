@@ -2,6 +2,7 @@ package com.kisaraginoah.noahtorikese;
 
 import com.kisaraginoah.noahtorikese.init.CreativeTabs;
 import com.kisaraginoah.noahtorikese.init.ModItems;
+import com.kisaraginoah.noahtorikese.init.ModSounds;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -16,6 +17,7 @@ public class NoahNoahMod {
         modEventBus.addListener(this::commonSetup);
         ModItems.REGISTER.register(modEventBus);
         CreativeTabs.REGISTER.register(modEventBus);
+        ModSounds.REGISTER.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
