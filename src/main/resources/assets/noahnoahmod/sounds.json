@@ -1,9 +1,8 @@
 {
-  "music.ohanabatake": {
-    "category": "record",
+  "ohanabatake": {
     "sounds": [
       {
-        "name": "music/ohanabatake",
+        "name": "noahnoahmod:ohanabatake",
         "stream": true
       }
     ]
