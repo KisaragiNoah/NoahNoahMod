@@ -37,6 +37,7 @@ public class CreativeTabs {
                         .icon(() -> new ItemStack(Items.MUSIC_DISC_CAT))
                         .displayItems((parameters, output) -> {
                             output.accept(ModItems.OHANABATAKE_MUSIC_DISC.value());
+                            output.accept(ModItems.ASURETIKKU_MUSIC_DISC.value());
                 }).withSearchBar().build()
         );
     }

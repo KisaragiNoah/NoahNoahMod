@@ -14,7 +14,10 @@ public class ModSounds {
     public static final DeferredRegister<SoundEvent> REGISTER = DeferredRegister.create(Registries.SOUND_EVENT, NoahNoahMod.MOD_ID);
 
     public static final Supplier<SoundEvent> OHANABATAKE = registerSoundEvent("ohanabatake");
+    public static final Supplier<SoundEvent> ASURETIKKU = registerSoundEvent("asuretikku");
+
     public static final ResourceKey<JukeboxSong> OHANABATAKE_KEY = createSong("ohanabatake");
+    public static final ResourceKey<JukeboxSong> ASURETIKKU_KEY = createSong("asuretikku");
 
     private static ResourceKey<JukeboxSong> createSong(String name) {
         return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(NoahNoahMod.MOD_ID, name));

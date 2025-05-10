@@ -7,5 +7,14 @@
         "volume": 0.5
       }
     ]
+  },
+  "asuretikku": {
+    "sounds": [
+      {
+        "name": "noahnoahmod:asuretikku",
+        "stream": true,
+        "volume": 0.5
+      }
+    ]
   }
 }

@@ -32,5 +32,8 @@
   "item_group.noahnoahmod.recordtab": "のあレコード",
 
   "item.noahnoahmod.ohanabatake_music_disc": "おはなばたけのレコード",
-  "item.noahnoahmod.ohanabatake_music_disc.desc": "製作者：Nintendo"
+  "item.noahnoahmod.ohanabatake_music_disc.desc": "おはなばたけ - 製作者：Nintendo",
+
+  "item.noahnoahmod.asuretikku_music_disc": "アスレチックのレコード",
+  "item.noahnoahmod.asuretikku_music_disc.desc": "アスレチック - 制作者：Nintendo"
 }
