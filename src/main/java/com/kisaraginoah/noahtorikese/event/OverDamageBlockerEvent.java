@@ -21,7 +21,7 @@ public class OverDamageBlockerEvent {
         ItemStack itemStack = ItemStack.EMPTY;
         boolean itemUsed = false;
 
-        if (event.getSource().is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+        if (!event.getSource().is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
             if (livingEntity instanceof Player player) {
 
                 NonNullList<ItemStack> inventory = player.getInventory().items;
