@@ -3,7 +3,8 @@
     "sounds": [
       {
         "name": "noahnoahmod:ohanabatake",
-        "stream": true
+        "stream": true,
+        "volume": 0.5
       }
     ]
   }

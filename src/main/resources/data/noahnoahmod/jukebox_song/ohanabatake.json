@@ -1,8 +1,8 @@
 {
-  "comparator_output": 15,
+  "comparator_output": 1,
   "description": {
     "translate": "item.noahnoahmod.ohanabatake_music_disc.desc"
   },
-  "length_in_seconds": 190.0,
+  "length_in_seconds": 178.0,
   "sound_event": "noahnoahmod:ohanabatake"
 }
