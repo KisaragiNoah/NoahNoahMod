@@ -6,7 +6,7 @@
     "LivingEntityMixin"
   ],
   "client": [
-    "ClientPlayNetworkHandlerMixin"
+    "ClientPacketListenerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

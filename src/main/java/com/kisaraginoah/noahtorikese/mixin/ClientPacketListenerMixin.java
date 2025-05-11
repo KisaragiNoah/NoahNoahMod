@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ClientPacketListener.class)
-public class ClientPlayNetworkHandlerMixin {
+public class ClientPacketListenerMixin {
 
     @Inject(method = "findTotem", at = @At("RETURN"), cancellable = true)
     private static void getActiveCustomTotemOfUndying(Player player, CallbackInfoReturnable<ItemStack> cir) {
