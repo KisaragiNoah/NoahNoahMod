@@ -27,7 +27,9 @@
   "item.noahnoahmod.knock_back_stick": "ノックバックスティック",
 
   "item.noahnoahmod.pose_changer": "ポーズチェンジャー",
-  "item.noahnoahmod.pose_changer.tooltip1": "デバック用",
+
+  "item.noahnoahmod.debug_item.tooltip1": "デバック用",
+  "item.noahnoahmod.test_item.tooltip1": "テスト用",
 
   "item_group.noahnoahmod.recordtab": "のあレコード",
 
